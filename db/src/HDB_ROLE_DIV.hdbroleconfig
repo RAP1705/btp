@@ -1,0 +1,10 @@
+{
+  "DIV_": {},
+  "DIV_AK47": {},
+  "com/batch3::DIV_AK47": {},
+  "com.batch3::DIV_AK47": {
+    "HANABASIC_BATCH3_HDI_DB_1": {
+      "schema": "HANABASIC_BATCH3_HDI_DB_1"
+    }
+  }
+}

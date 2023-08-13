@@ -1,0 +1,27 @@
+_schema-version: '2.1'
+ID: HANABASIC_BATCH3
+version: 0.0.1
+modules:
+  - name: db
+    type: hdb
+    path: db
+    requires:
+      - name: HANABASIC_BATCH3
+        properties:
+          service: '~(hdi-container-name}'
+      - name: UPS_ABAP_REMOTE
+    description: HANABASIC_BATCH3
+    properties:
+      name: UPS_ABAP_REMOTE
+resources:
+  - name: HANABASIC_BATCH3
+    type: com.sap.xs.hdi-container
+    properties:
+      hdi-container-name: '${service-name}'
+    parameters:
+      service: HANA
+      schema: HANABASIC_BATCH
+  - name: UPS_ABAP_REMOTE
+    type: org.cloudfoundry.existing-service
+    description: UPS_ABAP_REMOTE
+    parameters: {}

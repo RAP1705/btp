@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="com.batch3.CV::CV_KNA1" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="CV_KNA1.hdbcalculationview"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="com.batch3.VT::VT_KNA1">
+    <resourceUri>com.batch3.VT::VT_KNA1</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews/>
+<logicalModel id="com.batch3.VT::VT_KNA1">
+  <attributes>
+    <attribute id="KUNNR" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KUNNR"/>
+      <keyMapping columnObjectName="VT_KNA1" columnName="KUNNR"/>
+    </attribute>
+    <attribute id="NAME1" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAME1"/>
+      <keyMapping columnObjectName="VT_KNA1" columnName="NAME1"/>
+    </attribute>
+    <attribute id="NAME2" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAME2"/>
+      <keyMapping columnObjectName="VT_KNA1" columnName="NAME2"/>
+    </attribute>
+    <attribute id="AEDAT_1" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AEDAT_1"/>
+      <keyMapping columnObjectName="VT_KNA1" columnName="AEDAT"/>
+    </attribute>
+    <attribute id="USNAM_1" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="USNAM_1"/>
+      <keyMapping columnObjectName="VT_KNA1" columnName="USNAM"/>
+    </attribute>
+    <attribute id="SPRAS_1" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SPRAS_1"/>
+      <keyMapping columnObjectName="VT_KNA1" columnName="SPRAS"/>
+    </attribute>
+    <attribute id="KTOCD_1" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KTOCD_1"/>
+      <keyMapping columnObjectName="VT_KNA1" columnName="KTOCD"/>
+    </attribute>
+    <attribute id="KTOKD_1" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KTOKD_1"/>
+      <keyMapping columnObjectName="VT_KNA1" columnName="KTOKD"/>
+    </attribute>
+    <attribute id="MCOD1_1" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MCOD1_1"/>
+      <keyMapping columnObjectName="VT_KNA1" columnName="MCOD1"/>
+    </attribute>
+    <attribute id="ADRNR_1" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADRNR_1"/>
+      <keyMapping columnObjectName="VT_KNA1" columnName="ADRNR"/>
+    </attribute>
+    <attribute id="STRAS_1" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STRAS_1"/>
+      <keyMapping columnObjectName="VT_KNA1" columnName="STRAS"/>
+    </attribute>
+    <attribute id="SORTL_1" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SORTL_1"/>
+      <keyMapping columnObjectName="VT_KNA1" columnName="SORTL"/>
+    </attribute>
+    <attribute id="REGIO_1" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REGIO_1"/>
+      <keyMapping columnObjectName="VT_KNA1" columnName="REGIO"/>
+    </attribute>
+    <attribute id="ORT01_1" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ORT01_1"/>
+      <keyMapping columnObjectName="VT_KNA1" columnName="ORT01"/>
+    </attribute>
+    <attribute id="LAND1_1" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LAND1_1"/>
+      <keyMapping columnObjectName="VT_KNA1" columnName="LAND1"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

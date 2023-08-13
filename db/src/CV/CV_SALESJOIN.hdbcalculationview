@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="com.batch3.CV::CV_SALESJOIN" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" hierarchyGeneration="SQL" cacheInvalidationPeriod="NONE" enforceSqlExecution="true">
+<descriptions defaultDescription="CV_SALESJOIN"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="com.batch3.CV::CV_SALES">
+    <resourceUri>com.batch3.CV::CV_SALES</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="VBELN"/>
+      <viewAttribute id="ERDAT"/>
+      <viewAttribute id="ERZET"/>
+      <viewAttribute id="NETWR"/>
+      <viewAttribute id="VTWEG"/>
+      <viewAttribute id="SPART"/>
+      <viewAttribute id="POSNR"/>
+      <viewAttribute id="MATNR"/>
+      <viewAttribute id="MATWA"/>
+      <viewAttribute id="MATKL"/>
+      <viewAttribute id="MEINS"/>
+      <viewAttribute id="KUNNR"/>
+      <viewAttribute id="VKORG"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="com.batch3.CV::CV_SALES"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:AggregationView" id="Aggregation_1">
+    <viewAttributes>
+      <viewAttribute id="VBELN"/>
+      <viewAttribute id="ERDAT"/>
+      <viewAttribute id="ERZET"/>
+      <viewAttribute id="NETWR" aggregationType="sum"/>
+      <viewAttribute id="VTWEG"/>
+      <viewAttribute id="SPART"/>
+      <viewAttribute id="POSNR"/>
+      <viewAttribute id="MATNR"/>
+      <viewAttribute id="MATWA"/>
+      <viewAttribute id="MATKL"/>
+      <viewAttribute id="MEINS"/>
+      <viewAttribute id="KUNNR"/>
+      <viewAttribute id="VKORG"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="Projection_1"/>
+  </calculationView>
+</calculationViews>
+
+<logicalModel id="Aggregation_1">
+  <attributes>
+    <attribute id="VBEL" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VBELN"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="VBELN"/>
+    </attribute>
+    <attribute id="ERDAT_2" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ERDAT"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="ERDAT"/>
+    </attribute>
+    <attribute id="ERZET" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ERZET"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="ERZET"/>
+    </attribute>
+    <attribute id="VTWEG_2" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VTWEG"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="VTWEG"/>
+    </attribute>
+    <attribute id="SPART_2" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SPART"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="SPART"/>
+    </attribute>
+    <attribute id="POSNR" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="POSNR"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="POSNR"/>
+    </attribute>
+    <attribute id="MATNR" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MATNR"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="MATNR"/>
+    </attribute>
+    <attribute id="MATWA" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MATWA"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="MATWA"/>
+    </attribute>
+    <attribute id="MATKL" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MATKL"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="MATKL"/>
+    </attribute>
+    <attribute id="MEINS" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MEINS"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="MEINS"/>
+    </attribute>
+    <attribute id="KUNNR_2" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KUNNR"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="KUNNR"/>
+    </attribute>
+    <attribute id="VKORG_1" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VKORG"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="VKORG"/>
+    </attribute>
+    <attribute id="KUNNR$local">
+      <descriptions defaultDescription="KUNNR"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="KUNNR"/>
+    </attribute>
+    <attribute id="VKORG$local">
+      <descriptions defaultDescription="VKORG"/>
+      <keyMapping columnObjectName="Aggregation_1" columnName="VKORG"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="NETWR" order="4" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="NETWR"/>
+      <measureMapping columnObjectName="Aggregation_1" columnName="NETWR"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+  <sharedDimensions>
+    <logicalJoin associatedObjectUri="com.batch3.CV::CV_KNA1">
+      <attributes>
+        <attributeRef>KUNNR$local</attributeRef>
+      </attributes>
+      <associatedAttributeNames>
+        <attributeName>KUNNR</attributeName>
+      </associatedAttributeNames>
+      <properties cardinality="CN_N" joinType="leftOuter" joinOperator="Equal"/>
+      <associatedAttributeFeatures>
+        <attributeReference alias="ERDAT_1" attributeName="ERDAT"/>
+      </associatedAttributeFeatures>
+    </logicalJoin>
+    <logicalJoin associatedObjectUri="com.batch3.CV::CV_KNVV">
+      <attributes>
+        <attributeRef>KUNNR$local</attributeRef>
+        <attributeRef>VKORG$local</attributeRef>
+      </attributes>
+      <associatedAttributeNames>
+        <attributeName>KUNNR</attributeName>
+        <attributeName>VKORG</attributeName>
+      </associatedAttributeNames>
+      <properties cardinality="CN_N" joinType="leftOuter" joinOperator="Equal"/>
+      <associatedAttributeFeatures>
+        <attributeReference alias="KUNNR_1" attributeName="KUNNR"/>
+        <attributeReference alias="VTWEG_1" attributeName="VTWEG"/>
+        <attributeReference alias="SPART_1" attributeName="SPART"/>
+        <attributeReference alias="ERNAM_1" attributeName="ERNAM"/>
+      </associatedAttributeFeatures>
+    </logicalJoin>
+  </sharedDimensions>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="100" y="357"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    
+  
+    <shape expanded="true" modelObjectName="Aggregation_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="100" y="247"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="Aggregation_1" modelObjectNameSpace="StarJoinViewNodeInput" modelObjectType="repository">
+      <upperLeftCorner x="317" y="3"/>
+      <rectangleSize width="148"/>
+    </shape>
+    <shape modelObjectName="com.batch3.CV::CV_KNA1" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <upperLeftCorner x="15" y="9"/>
+      <rectangleSize width="100"/>
+    </shape>
+    <shape modelObjectName="com.batch3.CV::CV_KNVV" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <upperLeftCorner x="620" y="30"/>
+      <rectangleSize width="214"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

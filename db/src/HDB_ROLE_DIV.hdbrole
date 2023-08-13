@@ -1,0 +1,22 @@
+{
+  "role": {
+    "name": "com.batch3::DIV_AK47",
+    "object_privileges": [
+      {
+        "name": "com.batch3.CV::CV_RANK",
+        "type": "VIEW",
+        "privileges": [
+          "SELECT"
+        ]
+      }
+    ],
+    "schema_analytic_privileges": [
+      {
+        "schema_reference": "HANABASIC_BATCH3_HDI_DB_1",
+        "privileges": [
+          "com.batch3::AP_DIV"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,2528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="com.batch3.CV::CV_MULTIJOIN" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="CV_MULTIJOIN.hdbcalculationview"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="com.batch3.VT::VT_VBAP">
+    <resourceUri>com.batch3.VT::VT_VBAP</resourceUri>
+  </DataSource>
+  <DataSource id="com.batch3.VT::VT_VBAK">
+    <resourceUri>com.batch3.VT::VT_VBAK</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" cardinality="C1_N" joinType="inner">
+    <viewAttributes>
+      <viewAttribute id="MANDT"/>
+      <viewAttribute id="VBELN"/>
+      <viewAttribute id="POSNR"/>
+      <viewAttribute id="MATNR"/>
+      <viewAttribute id="MATWA"/>
+      <viewAttribute id="PMATN"/>
+      <viewAttribute id="CHARG"/>
+      <viewAttribute id="MATKL"/>
+      <viewAttribute id="ARKTX"/>
+      <viewAttribute id="PSTYV"/>
+      <viewAttribute id="POSAR"/>
+      <viewAttribute id="PROCESS_CODE"/>
+      <viewAttribute id="LFREL"/>
+      <viewAttribute id="FKREL"/>
+      <viewAttribute id="UEPOS"/>
+      <viewAttribute id="GRPOS"/>
+      <viewAttribute id="ABGRU"/>
+      <viewAttribute id="PRODH"/>
+      <viewAttribute id="PRODH_UNIV_SALES_PARNT_NODID"/>
+      <viewAttribute id="PRODH_UNIV_SALES_DET_ORIGIN"/>
+      <viewAttribute id="PRODH_UNIV_BATDET_PARNT_NODID"/>
+      <viewAttribute id="PRODH_UNIV_BATDET_DET_ORIGIN"/>
+      <viewAttribute id="ZWERT" aggregationType="sum"/>
+      <viewAttribute id="ZMENG" aggregationType="sum"/>
+      <viewAttribute id="ZIEME"/>
+      <viewAttribute id="UMZIZ" aggregationType="sum"/>
+      <viewAttribute id="UMZIN" aggregationType="sum"/>
+      <viewAttribute id="MEINS"/>
+      <viewAttribute id="SMENG" aggregationType="sum"/>
+      <viewAttribute id="ABLFZ" aggregationType="sum"/>
+      <viewAttribute id="ABDAT"/>
+      <viewAttribute id="ABSFZ" aggregationType="sum"/>
+      <viewAttribute id="POSEX"/>
+      <viewAttribute id="KDMAT"/>
+      <viewAttribute id="KBVER" aggregationType="sum"/>
+      <viewAttribute id="KEVER" aggregationType="sum"/>
+      <viewAttribute id="VKGRU"/>
+      <viewAttribute id="VKAUS"/>
+      <viewAttribute id="GRKOR"/>
+      <viewAttribute id="FMENG"/>
+      <viewAttribute id="UEBTK"/>
+      <viewAttribute id="UEBTO" aggregationType="sum"/>
+      <viewAttribute id="UNTTO" aggregationType="sum"/>
+      <viewAttribute id="FAKSP"/>
+      <viewAttribute id="ATPKZ"/>
+      <viewAttribute id="RKFKF"/>
+      <viewAttribute id="SPART"/>
+      <viewAttribute id="GSBER"/>
+      <viewAttribute id="NETWR" aggregationType="sum"/>
+      <viewAttribute id="WAERK"/>
+      <viewAttribute id="ANTLF" aggregationType="sum"/>
+      <viewAttribute id="KZTLF"/>
+      <viewAttribute id="CHSPL"/>
+      <viewAttribute id="KWMENG" aggregationType="sum"/>
+      <viewAttribute id="LSMENG" aggregationType="sum"/>
+      <viewAttribute id="KBMENG" aggregationType="sum"/>
+      <viewAttribute id="KLMENG" aggregationType="sum"/>
+      <viewAttribute id="VRKME"/>
+      <viewAttribute id="UMVKZ" aggregationType="sum"/>
+      <viewAttribute id="UMVKN" aggregationType="sum"/>
+      <viewAttribute id="BRGEW" aggregationType="sum"/>
+      <viewAttribute id="NTGEW" aggregationType="sum"/>
+      <viewAttribute id="GEWEI"/>
+      <viewAttribute id="VOLUM" aggregationType="sum"/>
+      <viewAttribute id="VOLEH"/>
+      <viewAttribute id="VBELV"/>
+      <viewAttribute id="POSNV"/>
+      <viewAttribute id="VGBEL"/>
+      <viewAttribute id="VGPOS"/>
+      <viewAttribute id="VOREF"/>
+      <viewAttribute id="UPFLU"/>
+      <viewAttribute id="ERLRE"/>
+      <viewAttribute id="LPRIO"/>
+      <viewAttribute id="WERKS"/>
+      <viewAttribute id="LGORT"/>
+      <viewAttribute id="VSTEL"/>
+      <viewAttribute id="ROUTE"/>
+      <viewAttribute id="STKEY"/>
+      <viewAttribute id="STDAT"/>
+      <viewAttribute id="STLNR"/>
+      <viewAttribute id="STPOS" aggregationType="sum"/>
+      <viewAttribute id="AWAHR"/>
+      <viewAttribute id="ERDAT"/>
+      <viewAttribute id="ERNAM"/>
+      <viewAttribute id="ERZET"/>
+      <viewAttribute id="TAXM1"/>
+      <viewAttribute id="TAXM2"/>
+      <viewAttribute id="TAXM3"/>
+      <viewAttribute id="TAXM4"/>
+      <viewAttribute id="TAXM5"/>
+      <viewAttribute id="TAXM6"/>
+      <viewAttribute id="TAXM7"/>
+      <viewAttribute id="TAXM8"/>
+      <viewAttribute id="TAXM9"/>
+      <viewAttribute id="VBEAF" aggregationType="sum"/>
+      <viewAttribute id="VBEAV" aggregationType="sum"/>
+      <viewAttribute id="VGREF"/>
+      <viewAttribute id="NETPR" aggregationType="sum"/>
+      <viewAttribute id="KPEIN" aggregationType="sum"/>
+      <viewAttribute id="KMEIN"/>
+      <viewAttribute id="SHKZG"/>
+      <viewAttribute id="SKTOF"/>
+      <viewAttribute id="MTVFP"/>
+      <viewAttribute id="SUMBD"/>
+      <viewAttribute id="KONDM"/>
+      <viewAttribute id="KTGRM"/>
+      <viewAttribute id="BONUS"/>
+      <viewAttribute id="PROVG"/>
+      <viewAttribute id="EANNR"/>
+      <viewAttribute id="PRSOK"/>
+      <viewAttribute id="BWTAR"/>
+      <viewAttribute id="BWTEX"/>
+      <viewAttribute id="XCHPF"/>
+      <viewAttribute id="XCHAR"/>
+      <viewAttribute id="LFMNG" aggregationType="sum"/>
+      <viewAttribute id="STAFO"/>
+      <viewAttribute id="WAVWR" aggregationType="sum"/>
+      <viewAttribute id="KZWI1" aggregationType="sum"/>
+      <viewAttribute id="KZWI2" aggregationType="sum"/>
+      <viewAttribute id="KZWI3" aggregationType="sum"/>
+      <viewAttribute id="KZWI4" aggregationType="sum"/>
+      <viewAttribute id="KZWI5" aggregationType="sum"/>
+      <viewAttribute id="KZWI6" aggregationType="sum"/>
+      <viewAttribute id="STCUR" aggregationType="sum"/>
+      <viewAttribute id="AEDAT"/>
+      <viewAttribute id="EAN11"/>
+      <viewAttribute id="FIXMG"/>
+      <viewAttribute id="PRCTR"/>
+      <viewAttribute id="MVGR1"/>
+      <viewAttribute id="MVGR2"/>
+      <viewAttribute id="MVGR3"/>
+      <viewAttribute id="MVGR4"/>
+      <viewAttribute id="MVGR5"/>
+      <viewAttribute id="KMPMG" aggregationType="sum"/>
+      <viewAttribute id="SUGRD"/>
+      <viewAttribute id="SOBKZ"/>
+      <viewAttribute id="VPZUO"/>
+      <viewAttribute id="PAOBJNR"/>
+      <viewAttribute id="FREEZE_PAOBJNR"/>
+      <viewAttribute id="PS_PSP_PNR"/>
+      <viewAttribute id="AUFNR"/>
+      <viewAttribute id="VPMAT"/>
+      <viewAttribute id="VPWRK"/>
+      <viewAttribute id="PRBME"/>
+      <viewAttribute id="UMREF" aggregationType="sum"/>
+      <viewAttribute id="KNTTP"/>
+      <viewAttribute id="KZVBR"/>
+      <viewAttribute id="SERNR"/>
+      <viewAttribute id="OBJNR"/>
+      <viewAttribute id="ABGRS"/>
+      <viewAttribute id="BEDAE"/>
+      <viewAttribute id="CMPRE" aggregationType="sum"/>
+      <viewAttribute id="CMTFG"/>
+      <viewAttribute id="CMPNT"/>
+      <viewAttribute id="CMKUA" aggregationType="sum"/>
+      <viewAttribute id="CUOBJ"/>
+      <viewAttribute id="CUOBJ_CH"/>
+      <viewAttribute id="CEPOK"/>
+      <viewAttribute id="KOUPD"/>
+      <viewAttribute id="SERAIL"/>
+      <viewAttribute id="ANZSN" aggregationType="sum"/>
+      <viewAttribute id="NACHL"/>
+      <viewAttribute id="MAGRV"/>
+      <viewAttribute id="MPROK"/>
+      <viewAttribute id="VGTYP"/>
+      <viewAttribute id="PROSA"/>
+      <viewAttribute id="UEPVW"/>
+      <viewAttribute id="KALNR"/>
+      <viewAttribute id="KLVAR"/>
+      <viewAttribute id="SPOSN"/>
+      <viewAttribute id="KOWRR"/>
+      <viewAttribute id="STADAT"/>
+      <viewAttribute id="EXART"/>
+      <viewAttribute id="PREFE"/>
+      <viewAttribute id="KNUMH"/>
+      <viewAttribute id="CLINT"/>
+      <viewAttribute id="CHMVS"/>
+      <viewAttribute id="STLTY"/>
+      <viewAttribute id="STLKN"/>
+      <viewAttribute id="STPOZ"/>
+      <viewAttribute id="STMAN"/>
+      <viewAttribute id="ZSCHL_K"/>
+      <viewAttribute id="KALSM_K"/>
+      <viewAttribute id="KALVAR"/>
+      <viewAttribute id="KOSCH"/>
+      <viewAttribute id="UPMAT"/>
+      <viewAttribute id="UKONM"/>
+      <viewAttribute id="MFRGR"/>
+      <viewAttribute id="PLAVO"/>
+      <viewAttribute id="KANNR"/>
+      <viewAttribute id="CMPRE_FLT" aggregationType="sum"/>
+      <viewAttribute id="ABFOR"/>
+      <viewAttribute id="ABGES" aggregationType="sum"/>
+      <viewAttribute id="J_1BCFOP"/>
+      <viewAttribute id="J_1BTAXLW1"/>
+      <viewAttribute id="J_1BTAXLW2"/>
+      <viewAttribute id="J_1BTXSDC"/>
+      <viewAttribute id="WKTNR"/>
+      <viewAttribute id="WKTPS"/>
+      <viewAttribute id="SKOPF"/>
+      <viewAttribute id="KZBWS"/>
+      <viewAttribute id="WGRU1"/>
+      <viewAttribute id="WGRU2"/>
+      <viewAttribute id="KNUMA_PI"/>
+      <viewAttribute id="KNUMA_AG"/>
+      <viewAttribute id="KZFME"/>
+      <viewAttribute id="LSTANR"/>
+      <viewAttribute id="TECHS"/>
+      <viewAttribute id="MWSBP" aggregationType="sum"/>
+      <viewAttribute id="BERID"/>
+      <viewAttribute id="PCTRF"/>
+      <viewAttribute id="LOGSYS_EXT"/>
+      <viewAttribute id="J_1BTAXLW3"/>
+      <viewAttribute id="J_1BTAXLW4"/>
+      <viewAttribute id="J_1BTAXLW5"/>
+      <viewAttribute id="STOCKLOC"/>
+      <viewAttribute id="SLOCTYPE"/>
+      <viewAttribute id="MSR_RET_REASON"/>
+      <viewAttribute id="MSR_REFUND_CODE"/>
+      <viewAttribute id="MSR_APPROV_BLOCK"/>
+      <viewAttribute id="NRAB_KNUMH"/>
+      <viewAttribute id="TRMRISK_RELEVANT"/>
+      <viewAttribute id="SGT_RCAT"/>
+      <viewAttribute id="VBKD_POSNR"/>
+      <viewAttribute id="VEDA_POSNR"/>
+      <viewAttribute id="HANDOVERLOC"/>
+      <viewAttribute id="EXT_REF_ITEM_ID"/>
+      <viewAttribute id="HANDOVERDATE"/>
+      <viewAttribute id="HANDOVERTIME"/>
+      <viewAttribute id="TC_AUT_DET"/>
+      <viewAttribute id="MANUAL_TC_REASON"/>
+      <viewAttribute id="FISCAL_INCENTIVE"/>
+      <viewAttribute id="TAX_SUBJECT_ST"/>
+      <viewAttribute id="FISCAL_INCENTIVE_ID"/>
+      <viewAttribute id="SPCSTO"/>
+      <viewAttribute id="REVACC_REFID"/>
+      <viewAttribute id="REVACC_REFTYPE"/>
+      <viewAttribute id="_DATAAGING"/>
+      <viewAttribute id="ABSTA"/>
+      <viewAttribute id="BESTA"/>
+      <viewAttribute id="CMPPI"/>
+      <viewAttribute id="CMPPJ"/>
+      <viewAttribute id="COSTA"/>
+      <viewAttribute id="DCSTA"/>
+      <viewAttribute id="FKSAA"/>
+      <viewAttribute id="FSSTA"/>
+      <viewAttribute id="GBSTA"/>
+      <viewAttribute id="LFGSA"/>
+      <viewAttribute id="LFSTA"/>
+      <viewAttribute id="LSSTA"/>
+      <viewAttribute id="MANEK"/>
+      <viewAttribute id="RFGSA"/>
+      <viewAttribute id="RFSTA"/>
+      <viewAttribute id="UVALL"/>
+      <viewAttribute id="UVFAK"/>
+      <viewAttribute id="UVPRS"/>
+      <viewAttribute id="UVVLK"/>
+      <viewAttribute id="UVP01"/>
+      <viewAttribute id="UVP02"/>
+      <viewAttribute id="UVP03"/>
+      <viewAttribute id="UVP04"/>
+      <viewAttribute id="UVP05"/>
+      <viewAttribute id="WBSTA"/>
+      <viewAttribute id="EMCST"/>
+      <viewAttribute id="SLCST"/>
+      <viewAttribute id="TOTAL_LCCST"/>
+      <viewAttribute id="PCSTA"/>
+      <viewAttribute id="DGSTA"/>
+      <viewAttribute id="SDSSTA"/>
+      <viewAttribute id="DP_CLEAR_STA_ITM"/>
+      <viewAttribute id="CMTD_DELIV_DATE"/>
+      <viewAttribute id="CMTD_DELIV_CREADATE"/>
+      <viewAttribute id="CMTD_DELIV_QTY_SU" aggregationType="sum"/>
+      <viewAttribute id="DELIVERY_DATE_TYPE_RULE"/>
+      <viewAttribute id="REQQTY_BU" aggregationType="sum"/>
+      <viewAttribute id="HANDLE"/>
+      <viewAttribute id="PBS_STATE"/>
+      <viewAttribute id="IFRS15_RELEVANCE"/>
+      <viewAttribute id="IFRS15_TOTAL_SSP" aggregationType="sum"/>
+      <viewAttribute id="REVFP"/>
+      <viewAttribute id="CAPPED_NET_AMOUNT" aggregationType="sum"/>
+      <viewAttribute id="CAPPED_NET_AMOUNT_ALERT_THLD"/>
+      <viewAttribute id="CATS_OVERTIME_CATEGORY"/>
+      <viewAttribute id="SESSION_CREATION_DATE"/>
+      <viewAttribute id="SESSION_CREATION_TIME"/>
+      <viewAttribute id="ORIGINAL_PLANT"/>
+      <viewAttribute id="ATP_ABC_SUBSTITUTION_STATUS"/>
+      <viewAttribute id="TRANSIT_PLANT"/>
+      <viewAttribute id="REASON_CODE"/>
+      <viewAttribute id="DUMMY_SLSDOCITEM_INCL_EEW_PS"/>
+      <viewAttribute id="PO_QUAN" aggregationType="sum"/>
+      <viewAttribute id="PO_UNIT"/>
+      <viewAttribute id="MILL_SE_GPOSN"/>
+      <viewAttribute id="MILL_BATCH_SEL_F"/>
+      <viewAttribute id="VBTYP_ANA"/>
+      <viewAttribute id="AUART_ANA"/>
+      <viewAttribute id="VKORG_ANA"/>
+      <viewAttribute id="VTWEG_ANA"/>
+      <viewAttribute id="SPART_ANA"/>
+      <viewAttribute id="VKBUR_ANA"/>
+      <viewAttribute id="VKGRP_ANA"/>
+      <viewAttribute id="AUGRU_ANA"/>
+      <viewAttribute id="AUDAT_ANA"/>
+      <viewAttribute id="KVGR1_ANA"/>
+      <viewAttribute id="KVGR2_ANA"/>
+      <viewAttribute id="KVGR3_ANA"/>
+      <viewAttribute id="KVGR4_ANA"/>
+      <viewAttribute id="KVGR5_ANA"/>
+      <viewAttribute id="VDATU_ANA"/>
+      <viewAttribute id="VSBED_ANA"/>
+      <viewAttribute id="KUNNR_ANA"/>
+      <viewAttribute id="KNUMV_ANA"/>
+      <viewAttribute id="BZIRK_ANA"/>
+      <viewAttribute id="BSTKD_ANA"/>
+      <viewAttribute id="KDGRP_ANA"/>
+      <viewAttribute id="VSART_ANA"/>
+      <viewAttribute id="FKDAT_ANA"/>
+      <viewAttribute id="FPLNR_ANA"/>
+      <viewAttribute id="KUNWE_ANA"/>
+      <viewAttribute id="KUNRE_ANA"/>
+      <viewAttribute id="PERVE_ANA"/>
+      <viewAttribute id="PERZM_ANA"/>
+      <viewAttribute id="KUNRG_ANA"/>
+      <viewAttribute id="SERVICE_DOC_TYPE"/>
+      <viewAttribute id="SERVICE_DOC_ID"/>
+      <viewAttribute id="SERVICE_DOC_ITEM_ID"/>
+      <viewAttribute id="SOLUTION_ORDER_ID"/>
+      <viewAttribute id="SOLUTION_ORDER_ITM_ID"/>
+      <viewAttribute id="GLO_LOG_REF1_IT"/>
+      <viewAttribute id="CPD_UPDAT" aggregationType="sum"/>
+      <viewAttribute id="ZAPCGKI"/>
+      <viewAttribute id="APCGK_EXTENDI"/>
+      <viewAttribute id="ZABDATI"/>
+      <viewAttribute id="AUFPL_OLC"/>
+      <viewAttribute id="APLZL_OLC"/>
+      <viewAttribute id="AD01PROFNR"/>
+      <viewAttribute id="ADMOI"/>
+      <viewAttribute id="ADICC"/>
+      <viewAttribute id="ADPRI"/>
+      <viewAttribute id="ADDNS"/>
+      <viewAttribute id="ADACN"/>
+      <viewAttribute id="ASSIGNMENT_PRIORITY"/>
+      <viewAttribute id="ARUN_GROUP_PRIO"/>
+      <viewAttribute id="LABSG"/>
+      <viewAttribute id="FABSG"/>
+      <viewAttribute id="PR_L_L"/>
+      <viewAttribute id="PR_F_F"/>
+      <viewAttribute id="PR_F_L"/>
+      <viewAttribute id="FERC_IND"/>
+      <viewAttribute id="FSH_SEASON_YEAR"/>
+      <viewAttribute id="FSH_SEASON"/>
+      <viewAttribute id="FSH_COLLECTION"/>
+      <viewAttribute id="FSH_THEME"/>
+      <viewAttribute id="FSH_CRSD"/>
+      <viewAttribute id="FSH_SEAREF"/>
+      <viewAttribute id="FSH_CANDATE"/>
+      <viewAttribute id="FSH_PSM_PFM_SPLIT"/>
+      <viewAttribute id="FSH_VAS_REL"/>
+      <viewAttribute id="FSH_VAS_PRNT_ID"/>
+      <viewAttribute id="FSH_TRANSACTION"/>
+      <viewAttribute id="FSH_ITEM_GROUP"/>
+      <viewAttribute id="FSH_ITEM"/>
+      <viewAttribute id="FSH_VASREF"/>
+      <viewAttribute id="FSH_GRID_COND_REC"/>
+      <viewAttribute id="FSH_PQR_UEPOS"/>
+      <viewAttribute id="RFM_SCC_INDICATOR"/>
+      <viewAttribute id="KOSTL"/>
+      <viewAttribute id="FONDS"/>
+      <viewAttribute id="FISTL"/>
+      <viewAttribute id="FKBER"/>
+      <viewAttribute id="GRANT_NBR"/>
+      <viewAttribute id="BUDGET_PD"/>
+      <viewAttribute id="IUID_RELEVANT"/>
+      <viewAttribute id="EQUNR"/>
+      <viewAttribute id="EQART"/>
+      <viewAttribute id="J_3GLVART"/>
+      <viewAttribute id="J_3GDATVO"/>
+      <viewAttribute id="J_3GDATBI"/>
+      <viewAttribute id="J_3GBELNRI"/>
+      <viewAttribute id="J_3GPOSNRI"/>
+      <viewAttribute id="PRS_OBJNR"/>
+      <viewAttribute id="PRS_SD_SPSNR"/>
+      <viewAttribute id="PRS_WORK_PERIOD"/>
+      <viewAttribute id="TAS"/>
+      <viewAttribute id="BETC"/>
+      <viewAttribute id="MOD_ALLOW"/>
+      <viewAttribute id="CANCEL_ALLOW"/>
+      <viewAttribute id="PAY_METHOD"/>
+      <viewAttribute id="BPN"/>
+      <viewAttribute id="REP_FREQ"/>
+      <viewAttribute id="FMFGUS_KEY"/>
+      <viewAttribute id="RFM_PSST_RULE"/>
+      <viewAttribute id="RFM_PSST_GROUP"/>
+      <viewAttribute id="PARGB"/>
+      <viewAttribute id="AUFPL_OAA"/>
+      <viewAttribute id="APLZL_OAA"/>
+      <viewAttribute id="VLCENDCU"/>
+      <viewAttribute id="WRF_CHARSTC1"/>
+      <viewAttribute id="WRF_CHARSTC2"/>
+      <viewAttribute id="WRF_CHARSTC3"/>
+      <viewAttribute id="ARSNUM"/>
+      <viewAttribute id="ARSPOS"/>
+      <viewAttribute id="WTYSC_CLMITEM"/>
+      <viewAttribute hidden="true" id="JOIN$VBELN$VBELN"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="com.batch3.VT::VT_VBAP">
+      <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="POSNR" source="POSNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MATWA" source="MATWA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PMATN" source="PMATN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHARG" source="CHARG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MATKL" source="MATKL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ARKTX" source="ARKTX"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PSTYV" source="PSTYV"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="POSAR" source="POSAR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PROCESS_CODE" source="PROCESS_CODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LFREL" source="LFREL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FKREL" source="FKREL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UEPOS" source="UEPOS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GRPOS" source="GRPOS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ABGRU" source="ABGRU"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRODH" source="PRODH"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRODH_UNIV_SALES_PARNT_NODID" source="PRODH_UNIV_SALES_PARNT_NODID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRODH_UNIV_SALES_DET_ORIGIN" source="PRODH_UNIV_SALES_DET_ORIGIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRODH_UNIV_BATDET_PARNT_NODID" source="PRODH_UNIV_BATDET_PARNT_NODID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRODH_UNIV_BATDET_DET_ORIGIN" source="PRODH_UNIV_BATDET_DET_ORIGIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ZWERT" source="ZWERT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ZMENG" source="ZMENG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ZIEME" source="ZIEME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UMZIZ" source="UMZIZ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UMZIN" source="UMZIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MEINS" source="MEINS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SMENG" source="SMENG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ABLFZ" source="ABLFZ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ABDAT" source="ABDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ABSFZ" source="ABSFZ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="POSEX" source="POSEX"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KDMAT" source="KDMAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KBVER" source="KBVER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KEVER" source="KEVER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VKGRU" source="VKGRU"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VKAUS" source="VKAUS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GRKOR" source="GRKOR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FMENG" source="FMENG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UEBTK" source="UEBTK"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UEBTO" source="UEBTO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UNTTO" source="UNTTO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FAKSP" source="FAKSP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ATPKZ" source="ATPKZ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RKFKF" source="RKFKF"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SPART" source="SPART"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GSBER" source="GSBER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NETWR" source="NETWR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WAERK" source="WAERK"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ANTLF" source="ANTLF"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZTLF" source="KZTLF"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHSPL" source="CHSPL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KWMENG" source="KWMENG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LSMENG" source="LSMENG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KBMENG" source="KBMENG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KLMENG" source="KLMENG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VRKME" source="VRKME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UMVKZ" source="UMVKZ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UMVKN" source="UMVKN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BRGEW" source="BRGEW"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NTGEW" source="NTGEW"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GEWEI" source="GEWEI"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VOLUM" source="VOLUM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VOLEH" source="VOLEH"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VBELV" source="VBELV"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="POSNV" source="POSNV"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VGBEL" source="VGBEL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VGPOS" source="VGPOS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VOREF" source="VOREF"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UPFLU" source="UPFLU"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ERLRE" source="ERLRE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LPRIO" source="LPRIO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LGORT" source="LGORT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VSTEL" source="VSTEL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ROUTE" source="ROUTE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STKEY" source="STKEY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STDAT" source="STDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STLNR" source="STLNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STPOS" source="STPOS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AWAHR" source="AWAHR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ERDAT" source="ERDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ERNAM" source="ERNAM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ERZET" source="ERZET"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TAXM1" source="TAXM1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TAXM2" source="TAXM2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TAXM3" source="TAXM3"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TAXM4" source="TAXM4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TAXM5" source="TAXM5"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TAXM6" source="TAXM6"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TAXM7" source="TAXM7"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TAXM8" source="TAXM8"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TAXM9" source="TAXM9"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VBEAF" source="VBEAF"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VBEAV" source="VBEAV"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VGREF" source="VGREF"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NETPR" source="NETPR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KPEIN" source="KPEIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KMEIN" source="KMEIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SHKZG" source="SHKZG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SKTOF" source="SKTOF"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MTVFP" source="MTVFP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SUMBD" source="SUMBD"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KONDM" source="KONDM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KTGRM" source="KTGRM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BONUS" source="BONUS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PROVG" source="PROVG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EANNR" source="EANNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRSOK" source="PRSOK"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BWTAR" source="BWTAR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BWTEX" source="BWTEX"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="XCHPF" source="XCHPF"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="XCHAR" source="XCHAR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LFMNG" source="LFMNG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STAFO" source="STAFO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WAVWR" source="WAVWR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZWI1" source="KZWI1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZWI2" source="KZWI2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZWI3" source="KZWI3"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZWI4" source="KZWI4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZWI5" source="KZWI5"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZWI6" source="KZWI6"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STCUR" source="STCUR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AEDAT" source="AEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EAN11" source="EAN11"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FIXMG" source="FIXMG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRCTR" source="PRCTR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MVGR1" source="MVGR1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MVGR2" source="MVGR2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MVGR3" source="MVGR3"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MVGR4" source="MVGR4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MVGR5" source="MVGR5"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KMPMG" source="KMPMG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SUGRD" source="SUGRD"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOBKZ" source="SOBKZ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VPZUO" source="VPZUO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PAOBJNR" source="PAOBJNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FREEZE_PAOBJNR" source="FREEZE_PAOBJNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PS_PSP_PNR" source="PS_PSP_PNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AUFNR" source="AUFNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VPMAT" source="VPMAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VPWRK" source="VPWRK"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRBME" source="PRBME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UMREF" source="UMREF"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KNTTP" source="KNTTP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZVBR" source="KZVBR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SERNR" source="SERNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJNR" source="OBJNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ABGRS" source="ABGRS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BEDAE" source="BEDAE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CMPRE" source="CMPRE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CMTFG" source="CMTFG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CMPNT" source="CMPNT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CMKUA" source="CMKUA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CUOBJ" source="CUOBJ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CUOBJ_CH" source="CUOBJ_CH"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CEPOK" source="CEPOK"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KOUPD" source="KOUPD"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SERAIL" source="SERAIL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ANZSN" source="ANZSN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NACHL" source="NACHL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MAGRV" source="MAGRV"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MPROK" source="MPROK"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VGTYP" source="VGTYP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PROSA" source="PROSA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UEPVW" source="UEPVW"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KALNR" source="KALNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KLVAR" source="KLVAR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SPOSN" source="SPOSN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KOWRR" source="KOWRR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STADAT" source="STADAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EXART" source="EXART"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PREFE" source="PREFE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KNUMH" source="KNUMH"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CLINT" source="CLINT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHMVS" source="CHMVS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STLTY" source="STLTY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STLKN" source="STLKN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STPOZ" source="STPOZ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STMAN" source="STMAN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ZSCHL_K" source="ZSCHL_K"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KALSM_K" source="KALSM_K"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KALVAR" source="KALVAR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KOSCH" source="KOSCH"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UPMAT" source="UPMAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UKONM" source="UKONM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MFRGR" source="MFRGR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PLAVO" source="PLAVO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KANNR" source="KANNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CMPRE_FLT" source="CMPRE_FLT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ABFOR" source="ABFOR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ABGES" source="ABGES"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="J_1BCFOP" source="J_1BCFOP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="J_1BTAXLW1" source="J_1BTAXLW1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="J_1BTAXLW2" source="J_1BTAXLW2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="J_1BTXSDC" source="J_1BTXSDC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WKTNR" source="WKTNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WKTPS" source="WKTPS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SKOPF" source="SKOPF"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZBWS" source="KZBWS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WGRU1" source="WGRU1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WGRU2" source="WGRU2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KNUMA_PI" source="KNUMA_PI"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KNUMA_AG" source="KNUMA_AG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KZFME" source="KZFME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LSTANR" source="LSTANR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TECHS" source="TECHS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MWSBP" source="MWSBP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BERID" source="BERID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PCTRF" source="PCTRF"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LOGSYS_EXT" source="LOGSYS_EXT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="J_1BTAXLW3" source="J_1BTAXLW3"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="J_1BTAXLW4" source="J_1BTAXLW4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="J_1BTAXLW5" source="J_1BTAXLW5"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STOCKLOC" source="STOCKLOC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SLOCTYPE" source="SLOCTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MSR_RET_REASON" source="MSR_RET_REASON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MSR_REFUND_CODE" source="MSR_REFUND_CODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MSR_APPROV_BLOCK" source="MSR_APPROV_BLOCK"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NRAB_KNUMH" source="NRAB_KNUMH"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TRMRISK_RELEVANT" source="TRMRISK_RELEVANT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SGT_RCAT" source="SGT_RCAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VBKD_POSNR" source="VBKD_POSNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VEDA_POSNR" source="VEDA_POSNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HANDOVERLOC" source="HANDOVERLOC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EXT_REF_ITEM_ID" source="EXT_REF_ITEM_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HANDOVERDATE" source="HANDOVERDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HANDOVERTIME" source="HANDOVERTIME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TC_AUT_DET" source="TC_AUT_DET"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MANUAL_TC_REASON" source="MANUAL_TC_REASON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FISCAL_INCENTIVE" source="FISCAL_INCENTIVE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TAX_SUBJECT_ST" source="TAX_SUBJECT_ST"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FISCAL_INCENTIVE_ID" source="FISCAL_INCENTIVE_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SPCSTO" source="SPCSTO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="REVACC_REFID" source="REVACC_REFID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="REVACC_REFTYPE" source="REVACC_REFTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="_DATAAGING" source="_DATAAGING"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ABSTA" source="ABSTA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BESTA" source="BESTA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CMPPI" source="CMPPI"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CMPPJ" source="CMPPJ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COSTA" source="COSTA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DCSTA" source="DCSTA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FKSAA" source="FKSAA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FSSTA" source="FSSTA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GBSTA" source="GBSTA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LFGSA" source="LFGSA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LFSTA" source="LFSTA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LSSTA" source="LSSTA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MANEK" source="MANEK"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RFGSA" source="RFGSA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RFSTA" source="RFSTA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UVALL" source="UVALL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UVFAK" source="UVFAK"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UVPRS" source="UVPRS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UVVLK" source="UVVLK"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UVP01" source="UVP01"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UVP02" source="UVP02"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UVP03" source="UVP03"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UVP04" source="UVP04"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UVP05" source="UVP05"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WBSTA" source="WBSTA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EMCST" source="EMCST"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SLCST" source="SLCST"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TOTAL_LCCST" source="TOTAL_LCCST"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PCSTA" source="PCSTA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DGSTA" source="DGSTA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SDSSTA" source="SDSSTA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DP_CLEAR_STA_ITM" source="DP_CLEAR_STA_ITM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CMTD_DELIV_DATE" source="CMTD_DELIV_DATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CMTD_DELIV_CREADATE" source="CMTD_DELIV_CREADATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CMTD_DELIV_QTY_SU" source="CMTD_DELIV_QTY_SU"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DELIVERY_DATE_TYPE_RULE" source="DELIVERY_DATE_TYPE_RULE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="REQQTY_BU" source="REQQTY_BU"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HANDLE" source="HANDLE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PBS_STATE" source="PBS_STATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="IFRS15_RELEVANCE" source="IFRS15_RELEVANCE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="IFRS15_TOTAL_SSP" source="IFRS15_TOTAL_SSP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="REVFP" source="REVFP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CAPPED_NET_AMOUNT" source="CAPPED_NET_AMOUNT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CAPPED_NET_AMOUNT_ALERT_THLD" source="CAPPED_NET_AMOUNT_ALERT_THLD"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CATS_OVERTIME_CATEGORY" source="CATS_OVERTIME_CATEGORY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SESSION_CREATION_DATE" source="SESSION_CREATION_DATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SESSION_CREATION_TIME" source="SESSION_CREATION_TIME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ORIGINAL_PLANT" source="ORIGINAL_PLANT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ATP_ABC_SUBSTITUTION_STATUS" source="ATP_ABC_SUBSTITUTION_STATUS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TRANSIT_PLANT" source="TRANSIT_PLANT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="REASON_CODE" source="REASON_CODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DUMMY_SLSDOCITEM_INCL_EEW_PS" source="DUMMY_SLSDOCITEM_INCL_EEW_PS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PO_QUAN" source="PO_QUAN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PO_UNIT" source="PO_UNIT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MILL_SE_GPOSN" source="MILL_SE_GPOSN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MILL_BATCH_SEL_F" source="MILL_BATCH_SEL_F"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VBTYP_ANA" source="VBTYP_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AUART_ANA" source="AUART_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VKORG_ANA" source="VKORG_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VTWEG_ANA" source="VTWEG_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SPART_ANA" source="SPART_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VKBUR_ANA" source="VKBUR_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VKGRP_ANA" source="VKGRP_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AUGRU_ANA" source="AUGRU_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AUDAT_ANA" source="AUDAT_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KVGR1_ANA" source="KVGR1_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KVGR2_ANA" source="KVGR2_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KVGR3_ANA" source="KVGR3_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KVGR4_ANA" source="KVGR4_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KVGR5_ANA" source="KVGR5_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VDATU_ANA" source="VDATU_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VSBED_ANA" source="VSBED_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR_ANA" source="KUNNR_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KNUMV_ANA" source="KNUMV_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BZIRK_ANA" source="BZIRK_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BSTKD_ANA" source="BSTKD_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KDGRP_ANA" source="KDGRP_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VSART_ANA" source="VSART_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FKDAT_ANA" source="FKDAT_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FPLNR_ANA" source="FPLNR_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KUNWE_ANA" source="KUNWE_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KUNRE_ANA" source="KUNRE_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PERVE_ANA" source="PERVE_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PERZM_ANA" source="PERZM_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KUNRG_ANA" source="KUNRG_ANA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SERVICE_DOC_TYPE" source="SERVICE_DOC_TYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SERVICE_DOC_ID" source="SERVICE_DOC_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SERVICE_DOC_ITEM_ID" source="SERVICE_DOC_ITEM_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOLUTION_ORDER_ID" source="SOLUTION_ORDER_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOLUTION_ORDER_ITM_ID" source="SOLUTION_ORDER_ITM_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GLO_LOG_REF1_IT" source="GLO_LOG_REF1_IT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPD_UPDAT" source="CPD_UPDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ZAPCGKI" source="ZAPCGKI"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="APCGK_EXTENDI" source="APCGK_EXTENDI"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ZABDATI" source="ZABDATI"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AUFPL_OLC" source="AUFPL_OLC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="APLZL_OLC" source="APLZL_OLC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AD01PROFNR" source="AD01PROFNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADMOI" source="ADMOI"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADICC" source="ADICC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADPRI" source="ADPRI"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDNS" source="ADDNS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADACN" source="ADACN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ASSIGNMENT_PRIORITY" source="ASSIGNMENT_PRIORITY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ARUN_GROUP_PRIO" source="ARUN_GROUP_PRIO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LABSG" source="LABSG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FABSG" source="FABSG"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PR_L_L" source="PR_L_L"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PR_F_F" source="PR_F_F"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PR_F_L" source="PR_F_L"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FERC_IND" source="FERC_IND"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FSH_SEASON_YEAR" source="FSH_SEASON_YEAR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FSH_SEASON" source="FSH_SEASON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FSH_COLLECTION" source="FSH_COLLECTION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FSH_THEME" source="FSH_THEME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FSH_CRSD" source="FSH_CRSD"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FSH_SEAREF" source="FSH_SEAREF"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FSH_CANDATE" source="FSH_CANDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FSH_PSM_PFM_SPLIT" source="FSH_PSM_PFM_SPLIT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FSH_VAS_REL" source="FSH_VAS_REL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FSH_VAS_PRNT_ID" source="FSH_VAS_PRNT_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FSH_TRANSACTION" source="FSH_TRANSACTION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FSH_ITEM_GROUP" source="FSH_ITEM_GROUP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FSH_ITEM" source="FSH_ITEM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FSH_VASREF" source="FSH_VASREF"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FSH_GRID_COND_REC" source="FSH_GRID_COND_REC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FSH_PQR_UEPOS" source="FSH_PQR_UEPOS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RFM_SCC_INDICATOR" source="RFM_SCC_INDICATOR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="KOSTL" source="KOSTL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FONDS" source="FONDS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FISTL" source="FISTL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FKBER" source="FKBER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GRANT_NBR" source="GRANT_NBR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BUDGET_PD" source="BUDGET_PD"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="IUID_RELEVANT" source="IUID_RELEVANT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EQUNR" source="EQUNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EQART" source="EQART"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="J_3GLVART" source="J_3GLVART"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="J_3GDATVO" source="J_3GDATVO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="J_3GDATBI" source="J_3GDATBI"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="J_3GBELNRI" source="J_3GBELNRI"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="J_3GPOSNRI" source="J_3GPOSNRI"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRS_OBJNR" source="PRS_OBJNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRS_SD_SPSNR" source="PRS_SD_SPSNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRS_WORK_PERIOD" source="PRS_WORK_PERIOD"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TAS" source="TAS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BETC" source="BETC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MOD_ALLOW" source="MOD_ALLOW"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CANCEL_ALLOW" source="CANCEL_ALLOW"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PAY_METHOD" source="PAY_METHOD"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BPN" source="BPN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="REP_FREQ" source="REP_FREQ"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FMFGUS_KEY" source="FMFGUS_KEY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RFM_PSST_RULE" source="RFM_PSST_RULE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RFM_PSST_GROUP" source="RFM_PSST_GROUP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PARGB" source="PARGB"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AUFPL_OAA" source="AUFPL_OAA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="APLZL_OAA" source="APLZL_OAA"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VLCENDCU" source="VLCENDCU"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WRF_CHARSTC1" source="WRF_CHARSTC1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WRF_CHARSTC2" source="WRF_CHARSTC2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WRF_CHARSTC3" source="WRF_CHARSTC3"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ARSNUM" source="ARSNUM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ARSPOS" source="ARSPOS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WTYSC_CLMITEM" source="WTYSC_CLMITEM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$VBELN$VBELN" source="VBELN"/>
+    </input>
+    <input node="com.batch3.VT::VT_VBAK">
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$VBELN$VBELN" source="VBELN"/>
+    </input>
+    <joinAttribute name="JOIN$VBELN$VBELN"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Join_1">
+  <attributes>
+    <attribute id="MANDT" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MANDT"/>
+      <keyMapping columnObjectName="Join_1" columnName="MANDT"/>
+    </attribute>
+    <attribute id="VBELN" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VBELN"/>
+      <keyMapping columnObjectName="Join_1" columnName="VBELN"/>
+    </attribute>
+    <attribute id="POSNR" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="POSNR"/>
+      <keyMapping columnObjectName="Join_1" columnName="POSNR"/>
+    </attribute>
+    <attribute id="MATNR" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MATNR"/>
+      <keyMapping columnObjectName="Join_1" columnName="MATNR"/>
+    </attribute>
+    <attribute id="MATWA" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MATWA"/>
+      <keyMapping columnObjectName="Join_1" columnName="MATWA"/>
+    </attribute>
+    <attribute id="PMATN" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PMATN"/>
+      <keyMapping columnObjectName="Join_1" columnName="PMATN"/>
+    </attribute>
+    <attribute id="CHARG" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHARG"/>
+      <keyMapping columnObjectName="Join_1" columnName="CHARG"/>
+    </attribute>
+    <attribute id="MATKL" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MATKL"/>
+      <keyMapping columnObjectName="Join_1" columnName="MATKL"/>
+    </attribute>
+    <attribute id="ARKTX" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ARKTX"/>
+      <keyMapping columnObjectName="Join_1" columnName="ARKTX"/>
+    </attribute>
+    <attribute id="PSTYV" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PSTYV"/>
+      <keyMapping columnObjectName="Join_1" columnName="PSTYV"/>
+    </attribute>
+    <attribute id="POSAR" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="POSAR"/>
+      <keyMapping columnObjectName="Join_1" columnName="POSAR"/>
+    </attribute>
+    <attribute id="PROCESS_CODE" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PROCESS_CODE"/>
+      <keyMapping columnObjectName="Join_1" columnName="PROCESS_CODE"/>
+    </attribute>
+    <attribute id="LFREL" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LFREL"/>
+      <keyMapping columnObjectName="Join_1" columnName="LFREL"/>
+    </attribute>
+    <attribute id="FKREL" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FKREL"/>
+      <keyMapping columnObjectName="Join_1" columnName="FKREL"/>
+    </attribute>
+    <attribute id="UEPOS" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UEPOS"/>
+      <keyMapping columnObjectName="Join_1" columnName="UEPOS"/>
+    </attribute>
+    <attribute id="GRPOS" order="16" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GRPOS"/>
+      <keyMapping columnObjectName="Join_1" columnName="GRPOS"/>
+    </attribute>
+    <attribute id="ABGRU" order="17" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ABGRU"/>
+      <keyMapping columnObjectName="Join_1" columnName="ABGRU"/>
+    </attribute>
+    <attribute id="PRODH" order="18" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRODH"/>
+      <keyMapping columnObjectName="Join_1" columnName="PRODH"/>
+    </attribute>
+    <attribute id="PRODH_UNIV_SALES_PARNT_NODID" order="19" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRODH_UNIV_SALES_PARNT_NODID"/>
+      <keyMapping columnObjectName="Join_1" columnName="PRODH_UNIV_SALES_PARNT_NODID"/>
+    </attribute>
+    <attribute id="PRODH_UNIV_SALES_DET_ORIGIN" order="20" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRODH_UNIV_SALES_DET_ORIGIN"/>
+      <keyMapping columnObjectName="Join_1" columnName="PRODH_UNIV_SALES_DET_ORIGIN"/>
+    </attribute>
+    <attribute id="PRODH_UNIV_BATDET_PARNT_NODID" order="21" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRODH_UNIV_BATDET_PARNT_NODID"/>
+      <keyMapping columnObjectName="Join_1" columnName="PRODH_UNIV_BATDET_PARNT_NODID"/>
+    </attribute>
+    <attribute id="PRODH_UNIV_BATDET_DET_ORIGIN" order="22" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRODH_UNIV_BATDET_DET_ORIGIN"/>
+      <keyMapping columnObjectName="Join_1" columnName="PRODH_UNIV_BATDET_DET_ORIGIN"/>
+    </attribute>
+    <attribute id="ZIEME" order="25" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ZIEME"/>
+      <keyMapping columnObjectName="Join_1" columnName="ZIEME"/>
+    </attribute>
+    <attribute id="MEINS" order="28" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MEINS"/>
+      <keyMapping columnObjectName="Join_1" columnName="MEINS"/>
+    </attribute>
+    <attribute id="ABDAT" order="31" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ABDAT"/>
+      <keyMapping columnObjectName="Join_1" columnName="ABDAT"/>
+    </attribute>
+    <attribute id="POSEX" order="33" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="POSEX"/>
+      <keyMapping columnObjectName="Join_1" columnName="POSEX"/>
+    </attribute>
+    <attribute id="KDMAT" order="34" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KDMAT"/>
+      <keyMapping columnObjectName="Join_1" columnName="KDMAT"/>
+    </attribute>
+    <attribute id="VKGRU" order="37" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VKGRU"/>
+      <keyMapping columnObjectName="Join_1" columnName="VKGRU"/>
+    </attribute>
+    <attribute id="VKAUS" order="38" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VKAUS"/>
+      <keyMapping columnObjectName="Join_1" columnName="VKAUS"/>
+    </attribute>
+    <attribute id="GRKOR" order="39" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GRKOR"/>
+      <keyMapping columnObjectName="Join_1" columnName="GRKOR"/>
+    </attribute>
+    <attribute id="FMENG" order="40" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FMENG"/>
+      <keyMapping columnObjectName="Join_1" columnName="FMENG"/>
+    </attribute>
+    <attribute id="UEBTK" order="41" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UEBTK"/>
+      <keyMapping columnObjectName="Join_1" columnName="UEBTK"/>
+    </attribute>
+    <attribute id="FAKSP" order="44" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FAKSP"/>
+      <keyMapping columnObjectName="Join_1" columnName="FAKSP"/>
+    </attribute>
+    <attribute id="ATPKZ" order="45" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ATPKZ"/>
+      <keyMapping columnObjectName="Join_1" columnName="ATPKZ"/>
+    </attribute>
+    <attribute id="RKFKF" order="46" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RKFKF"/>
+      <keyMapping columnObjectName="Join_1" columnName="RKFKF"/>
+    </attribute>
+    <attribute id="SPART" order="47" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SPART"/>
+      <keyMapping columnObjectName="Join_1" columnName="SPART"/>
+    </attribute>
+    <attribute id="GSBER" order="48" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GSBER"/>
+      <keyMapping columnObjectName="Join_1" columnName="GSBER"/>
+    </attribute>
+    <attribute id="WAERK" order="50" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WAERK"/>
+      <keyMapping columnObjectName="Join_1" columnName="WAERK"/>
+    </attribute>
+    <attribute id="KZTLF" order="52" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KZTLF"/>
+      <keyMapping columnObjectName="Join_1" columnName="KZTLF"/>
+    </attribute>
+    <attribute id="CHSPL" order="53" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHSPL"/>
+      <keyMapping columnObjectName="Join_1" columnName="CHSPL"/>
+    </attribute>
+    <attribute id="VRKME" order="58" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VRKME"/>
+      <keyMapping columnObjectName="Join_1" columnName="VRKME"/>
+    </attribute>
+    <attribute id="GEWEI" order="63" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GEWEI"/>
+      <keyMapping columnObjectName="Join_1" columnName="GEWEI"/>
+    </attribute>
+    <attribute id="VOLEH" order="65" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VOLEH"/>
+      <keyMapping columnObjectName="Join_1" columnName="VOLEH"/>
+    </attribute>
+    <attribute id="VBELV" order="66" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VBELV"/>
+      <keyMapping columnObjectName="Join_1" columnName="VBELV"/>
+    </attribute>
+    <attribute id="POSNV" order="67" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="POSNV"/>
+      <keyMapping columnObjectName="Join_1" columnName="POSNV"/>
+    </attribute>
+    <attribute id="VGBEL" order="68" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VGBEL"/>
+      <keyMapping columnObjectName="Join_1" columnName="VGBEL"/>
+    </attribute>
+    <attribute id="VGPOS" order="69" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VGPOS"/>
+      <keyMapping columnObjectName="Join_1" columnName="VGPOS"/>
+    </attribute>
+    <attribute id="VOREF" order="70" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VOREF"/>
+      <keyMapping columnObjectName="Join_1" columnName="VOREF"/>
+    </attribute>
+    <attribute id="UPFLU" order="71" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UPFLU"/>
+      <keyMapping columnObjectName="Join_1" columnName="UPFLU"/>
+    </attribute>
+    <attribute id="ERLRE" order="72" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ERLRE"/>
+      <keyMapping columnObjectName="Join_1" columnName="ERLRE"/>
+    </attribute>
+    <attribute id="LPRIO" order="73" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LPRIO"/>
+      <keyMapping columnObjectName="Join_1" columnName="LPRIO"/>
+    </attribute>
+    <attribute id="WERKS" order="74" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WERKS"/>
+      <keyMapping columnObjectName="Join_1" columnName="WERKS"/>
+    </attribute>
+    <attribute id="LGORT" order="75" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LGORT"/>
+      <keyMapping columnObjectName="Join_1" columnName="LGORT"/>
+    </attribute>
+    <attribute id="VSTEL" order="76" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VSTEL"/>
+      <keyMapping columnObjectName="Join_1" columnName="VSTEL"/>
+    </attribute>
+    <attribute id="ROUTE" order="77" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ROUTE"/>
+      <keyMapping columnObjectName="Join_1" columnName="ROUTE"/>
+    </attribute>
+    <attribute id="STKEY" order="78" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STKEY"/>
+      <keyMapping columnObjectName="Join_1" columnName="STKEY"/>
+    </attribute>
+    <attribute id="STDAT" order="79" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STDAT"/>
+      <keyMapping columnObjectName="Join_1" columnName="STDAT"/>
+    </attribute>
+    <attribute id="STLNR" order="80" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STLNR"/>
+      <keyMapping columnObjectName="Join_1" columnName="STLNR"/>
+    </attribute>
+    <attribute id="AWAHR" order="82" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AWAHR"/>
+      <keyMapping columnObjectName="Join_1" columnName="AWAHR"/>
+    </attribute>
+    <attribute id="ERDAT" order="83" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ERDAT"/>
+      <keyMapping columnObjectName="Join_1" columnName="ERDAT"/>
+    </attribute>
+    <attribute id="ERNAM" order="84" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ERNAM"/>
+      <keyMapping columnObjectName="Join_1" columnName="ERNAM"/>
+    </attribute>
+    <attribute id="ERZET" order="85" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ERZET"/>
+      <keyMapping columnObjectName="Join_1" columnName="ERZET"/>
+    </attribute>
+    <attribute id="TAXM1" order="86" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TAXM1"/>
+      <keyMapping columnObjectName="Join_1" columnName="TAXM1"/>
+    </attribute>
+    <attribute id="TAXM2" order="87" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TAXM2"/>
+      <keyMapping columnObjectName="Join_1" columnName="TAXM2"/>
+    </attribute>
+    <attribute id="TAXM3" order="88" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TAXM3"/>
+      <keyMapping columnObjectName="Join_1" columnName="TAXM3"/>
+    </attribute>
+    <attribute id="TAXM4" order="89" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TAXM4"/>
+      <keyMapping columnObjectName="Join_1" columnName="TAXM4"/>
+    </attribute>
+    <attribute id="TAXM5" order="90" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TAXM5"/>
+      <keyMapping columnObjectName="Join_1" columnName="TAXM5"/>
+    </attribute>
+    <attribute id="TAXM6" order="91" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TAXM6"/>
+      <keyMapping columnObjectName="Join_1" columnName="TAXM6"/>
+    </attribute>
+    <attribute id="TAXM7" order="92" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TAXM7"/>
+      <keyMapping columnObjectName="Join_1" columnName="TAXM7"/>
+    </attribute>
+    <attribute id="TAXM8" order="93" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TAXM8"/>
+      <keyMapping columnObjectName="Join_1" columnName="TAXM8"/>
+    </attribute>
+    <attribute id="TAXM9" order="94" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TAXM9"/>
+      <keyMapping columnObjectName="Join_1" columnName="TAXM9"/>
+    </attribute>
+    <attribute id="VGREF" order="97" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VGREF"/>
+      <keyMapping columnObjectName="Join_1" columnName="VGREF"/>
+    </attribute>
+    <attribute id="KMEIN" order="100" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KMEIN"/>
+      <keyMapping columnObjectName="Join_1" columnName="KMEIN"/>
+    </attribute>
+    <attribute id="SHKZG" order="101" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SHKZG"/>
+      <keyMapping columnObjectName="Join_1" columnName="SHKZG"/>
+    </attribute>
+    <attribute id="SKTOF" order="102" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SKTOF"/>
+      <keyMapping columnObjectName="Join_1" columnName="SKTOF"/>
+    </attribute>
+    <attribute id="MTVFP" order="103" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MTVFP"/>
+      <keyMapping columnObjectName="Join_1" columnName="MTVFP"/>
+    </attribute>
+    <attribute id="SUMBD" order="104" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SUMBD"/>
+      <keyMapping columnObjectName="Join_1" columnName="SUMBD"/>
+    </attribute>
+    <attribute id="KONDM" order="105" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KONDM"/>
+      <keyMapping columnObjectName="Join_1" columnName="KONDM"/>
+    </attribute>
+    <attribute id="KTGRM" order="106" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KTGRM"/>
+      <keyMapping columnObjectName="Join_1" columnName="KTGRM"/>
+    </attribute>
+    <attribute id="BONUS" order="107" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BONUS"/>
+      <keyMapping columnObjectName="Join_1" columnName="BONUS"/>
+    </attribute>
+    <attribute id="PROVG" order="108" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PROVG"/>
+      <keyMapping columnObjectName="Join_1" columnName="PROVG"/>
+    </attribute>
+    <attribute id="EANNR" order="109" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EANNR"/>
+      <keyMapping columnObjectName="Join_1" columnName="EANNR"/>
+    </attribute>
+    <attribute id="PRSOK" order="110" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRSOK"/>
+      <keyMapping columnObjectName="Join_1" columnName="PRSOK"/>
+    </attribute>
+    <attribute id="BWTAR" order="111" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BWTAR"/>
+      <keyMapping columnObjectName="Join_1" columnName="BWTAR"/>
+    </attribute>
+    <attribute id="BWTEX" order="112" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BWTEX"/>
+      <keyMapping columnObjectName="Join_1" columnName="BWTEX"/>
+    </attribute>
+    <attribute id="XCHPF" order="113" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="XCHPF"/>
+      <keyMapping columnObjectName="Join_1" columnName="XCHPF"/>
+    </attribute>
+    <attribute id="XCHAR" order="114" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="XCHAR"/>
+      <keyMapping columnObjectName="Join_1" columnName="XCHAR"/>
+    </attribute>
+    <attribute id="STAFO" order="116" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STAFO"/>
+      <keyMapping columnObjectName="Join_1" columnName="STAFO"/>
+    </attribute>
+    <attribute id="AEDAT" order="125" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AEDAT"/>
+      <keyMapping columnObjectName="Join_1" columnName="AEDAT"/>
+    </attribute>
+    <attribute id="EAN11" order="126" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EAN11"/>
+      <keyMapping columnObjectName="Join_1" columnName="EAN11"/>
+    </attribute>
+    <attribute id="FIXMG" order="127" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FIXMG"/>
+      <keyMapping columnObjectName="Join_1" columnName="FIXMG"/>
+    </attribute>
+    <attribute id="PRCTR" order="128" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRCTR"/>
+      <keyMapping columnObjectName="Join_1" columnName="PRCTR"/>
+    </attribute>
+    <attribute id="MVGR1" order="129" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MVGR1"/>
+      <keyMapping columnObjectName="Join_1" columnName="MVGR1"/>
+    </attribute>
+    <attribute id="MVGR2" order="130" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MVGR2"/>
+      <keyMapping columnObjectName="Join_1" columnName="MVGR2"/>
+    </attribute>
+    <attribute id="MVGR3" order="131" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MVGR3"/>
+      <keyMapping columnObjectName="Join_1" columnName="MVGR3"/>
+    </attribute>
+    <attribute id="MVGR4" order="132" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MVGR4"/>
+      <keyMapping columnObjectName="Join_1" columnName="MVGR4"/>
+    </attribute>
+    <attribute id="MVGR5" order="133" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MVGR5"/>
+      <keyMapping columnObjectName="Join_1" columnName="MVGR5"/>
+    </attribute>
+    <attribute id="SUGRD" order="135" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SUGRD"/>
+      <keyMapping columnObjectName="Join_1" columnName="SUGRD"/>
+    </attribute>
+    <attribute id="SOBKZ" order="136" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SOBKZ"/>
+      <keyMapping columnObjectName="Join_1" columnName="SOBKZ"/>
+    </attribute>
+    <attribute id="VPZUO" order="137" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VPZUO"/>
+      <keyMapping columnObjectName="Join_1" columnName="VPZUO"/>
+    </attribute>
+    <attribute id="PAOBJNR" order="138" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PAOBJNR"/>
+      <keyMapping columnObjectName="Join_1" columnName="PAOBJNR"/>
+    </attribute>
+    <attribute id="FREEZE_PAOBJNR" order="139" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FREEZE_PAOBJNR"/>
+      <keyMapping columnObjectName="Join_1" columnName="FREEZE_PAOBJNR"/>
+    </attribute>
+    <attribute id="PS_PSP_PNR" order="140" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PS_PSP_PNR"/>
+      <keyMapping columnObjectName="Join_1" columnName="PS_PSP_PNR"/>
+    </attribute>
+    <attribute id="AUFNR" order="141" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AUFNR"/>
+      <keyMapping columnObjectName="Join_1" columnName="AUFNR"/>
+    </attribute>
+    <attribute id="VPMAT" order="142" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VPMAT"/>
+      <keyMapping columnObjectName="Join_1" columnName="VPMAT"/>
+    </attribute>
+    <attribute id="VPWRK" order="143" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VPWRK"/>
+      <keyMapping columnObjectName="Join_1" columnName="VPWRK"/>
+    </attribute>
+    <attribute id="PRBME" order="144" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRBME"/>
+      <keyMapping columnObjectName="Join_1" columnName="PRBME"/>
+    </attribute>
+    <attribute id="KNTTP" order="146" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KNTTP"/>
+      <keyMapping columnObjectName="Join_1" columnName="KNTTP"/>
+    </attribute>
+    <attribute id="KZVBR" order="147" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KZVBR"/>
+      <keyMapping columnObjectName="Join_1" columnName="KZVBR"/>
+    </attribute>
+    <attribute id="SERNR" order="148" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SERNR"/>
+      <keyMapping columnObjectName="Join_1" columnName="SERNR"/>
+    </attribute>
+    <attribute id="OBJNR" order="149" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="OBJNR"/>
+      <keyMapping columnObjectName="Join_1" columnName="OBJNR"/>
+    </attribute>
+    <attribute id="ABGRS" order="150" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ABGRS"/>
+      <keyMapping columnObjectName="Join_1" columnName="ABGRS"/>
+    </attribute>
+    <attribute id="BEDAE" order="151" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BEDAE"/>
+      <keyMapping columnObjectName="Join_1" columnName="BEDAE"/>
+    </attribute>
+    <attribute id="CMTFG" order="153" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CMTFG"/>
+      <keyMapping columnObjectName="Join_1" columnName="CMTFG"/>
+    </attribute>
+    <attribute id="CMPNT" order="154" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CMPNT"/>
+      <keyMapping columnObjectName="Join_1" columnName="CMPNT"/>
+    </attribute>
+    <attribute id="CUOBJ" order="156" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CUOBJ"/>
+      <keyMapping columnObjectName="Join_1" columnName="CUOBJ"/>
+    </attribute>
+    <attribute id="CUOBJ_CH" order="157" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CUOBJ_CH"/>
+      <keyMapping columnObjectName="Join_1" columnName="CUOBJ_CH"/>
+    </attribute>
+    <attribute id="CEPOK" order="158" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CEPOK"/>
+      <keyMapping columnObjectName="Join_1" columnName="CEPOK"/>
+    </attribute>
+    <attribute id="KOUPD" order="159" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KOUPD"/>
+      <keyMapping columnObjectName="Join_1" columnName="KOUPD"/>
+    </attribute>
+    <attribute id="SERAIL" order="160" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SERAIL"/>
+      <keyMapping columnObjectName="Join_1" columnName="SERAIL"/>
+    </attribute>
+    <attribute id="NACHL" order="162" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NACHL"/>
+      <keyMapping columnObjectName="Join_1" columnName="NACHL"/>
+    </attribute>
+    <attribute id="MAGRV" order="163" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MAGRV"/>
+      <keyMapping columnObjectName="Join_1" columnName="MAGRV"/>
+    </attribute>
+    <attribute id="MPROK" order="164" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MPROK"/>
+      <keyMapping columnObjectName="Join_1" columnName="MPROK"/>
+    </attribute>
+    <attribute id="VGTYP" order="165" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VGTYP"/>
+      <keyMapping columnObjectName="Join_1" columnName="VGTYP"/>
+    </attribute>
+    <attribute id="PROSA" order="166" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PROSA"/>
+      <keyMapping columnObjectName="Join_1" columnName="PROSA"/>
+    </attribute>
+    <attribute id="UEPVW" order="167" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UEPVW"/>
+      <keyMapping columnObjectName="Join_1" columnName="UEPVW"/>
+    </attribute>
+    <attribute id="KALNR" order="168" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KALNR"/>
+      <keyMapping columnObjectName="Join_1" columnName="KALNR"/>
+    </attribute>
+    <attribute id="KLVAR" order="169" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KLVAR"/>
+      <keyMapping columnObjectName="Join_1" columnName="KLVAR"/>
+    </attribute>
+    <attribute id="SPOSN" order="170" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SPOSN"/>
+      <keyMapping columnObjectName="Join_1" columnName="SPOSN"/>
+    </attribute>
+    <attribute id="KOWRR" order="171" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KOWRR"/>
+      <keyMapping columnObjectName="Join_1" columnName="KOWRR"/>
+    </attribute>
+    <attribute id="STADAT" order="172" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STADAT"/>
+      <keyMapping columnObjectName="Join_1" columnName="STADAT"/>
+    </attribute>
+    <attribute id="EXART" order="173" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EXART"/>
+      <keyMapping columnObjectName="Join_1" columnName="EXART"/>
+    </attribute>
+    <attribute id="PREFE" order="174" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PREFE"/>
+      <keyMapping columnObjectName="Join_1" columnName="PREFE"/>
+    </attribute>
+    <attribute id="KNUMH" order="175" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KNUMH"/>
+      <keyMapping columnObjectName="Join_1" columnName="KNUMH"/>
+    </attribute>
+    <attribute id="CLINT" order="176" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CLINT"/>
+      <keyMapping columnObjectName="Join_1" columnName="CLINT"/>
+    </attribute>
+    <attribute id="CHMVS" order="177" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHMVS"/>
+      <keyMapping columnObjectName="Join_1" columnName="CHMVS"/>
+    </attribute>
+    <attribute id="STLTY" order="178" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STLTY"/>
+      <keyMapping columnObjectName="Join_1" columnName="STLTY"/>
+    </attribute>
+    <attribute id="STLKN" order="179" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STLKN"/>
+      <keyMapping columnObjectName="Join_1" columnName="STLKN"/>
+    </attribute>
+    <attribute id="STPOZ" order="180" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STPOZ"/>
+      <keyMapping columnObjectName="Join_1" columnName="STPOZ"/>
+    </attribute>
+    <attribute id="STMAN" order="181" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STMAN"/>
+      <keyMapping columnObjectName="Join_1" columnName="STMAN"/>
+    </attribute>
+    <attribute id="ZSCHL_K" order="182" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ZSCHL_K"/>
+      <keyMapping columnObjectName="Join_1" columnName="ZSCHL_K"/>
+    </attribute>
+    <attribute id="KALSM_K" order="183" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KALSM_K"/>
+      <keyMapping columnObjectName="Join_1" columnName="KALSM_K"/>
+    </attribute>
+    <attribute id="KALVAR" order="184" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KALVAR"/>
+      <keyMapping columnObjectName="Join_1" columnName="KALVAR"/>
+    </attribute>
+    <attribute id="KOSCH" order="185" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KOSCH"/>
+      <keyMapping columnObjectName="Join_1" columnName="KOSCH"/>
+    </attribute>
+    <attribute id="UPMAT" order="186" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UPMAT"/>
+      <keyMapping columnObjectName="Join_1" columnName="UPMAT"/>
+    </attribute>
+    <attribute id="UKONM" order="187" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UKONM"/>
+      <keyMapping columnObjectName="Join_1" columnName="UKONM"/>
+    </attribute>
+    <attribute id="MFRGR" order="188" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MFRGR"/>
+      <keyMapping columnObjectName="Join_1" columnName="MFRGR"/>
+    </attribute>
+    <attribute id="PLAVO" order="189" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PLAVO"/>
+      <keyMapping columnObjectName="Join_1" columnName="PLAVO"/>
+    </attribute>
+    <attribute id="KANNR" order="190" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KANNR"/>
+      <keyMapping columnObjectName="Join_1" columnName="KANNR"/>
+    </attribute>
+    <attribute id="ABFOR" order="192" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ABFOR"/>
+      <keyMapping columnObjectName="Join_1" columnName="ABFOR"/>
+    </attribute>
+    <attribute id="J_1BCFOP" order="194" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="J_1BCFOP"/>
+      <keyMapping columnObjectName="Join_1" columnName="J_1BCFOP"/>
+    </attribute>
+    <attribute id="J_1BTAXLW1" order="195" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="J_1BTAXLW1"/>
+      <keyMapping columnObjectName="Join_1" columnName="J_1BTAXLW1"/>
+    </attribute>
+    <attribute id="J_1BTAXLW2" order="196" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="J_1BTAXLW2"/>
+      <keyMapping columnObjectName="Join_1" columnName="J_1BTAXLW2"/>
+    </attribute>
+    <attribute id="J_1BTXSDC" order="197" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="J_1BTXSDC"/>
+      <keyMapping columnObjectName="Join_1" columnName="J_1BTXSDC"/>
+    </attribute>
+    <attribute id="WKTNR" order="198" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WKTNR"/>
+      <keyMapping columnObjectName="Join_1" columnName="WKTNR"/>
+    </attribute>
+    <attribute id="WKTPS" order="199" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WKTPS"/>
+      <keyMapping columnObjectName="Join_1" columnName="WKTPS"/>
+    </attribute>
+    <attribute id="SKOPF" order="200" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SKOPF"/>
+      <keyMapping columnObjectName="Join_1" columnName="SKOPF"/>
+    </attribute>
+    <attribute id="KZBWS" order="201" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KZBWS"/>
+      <keyMapping columnObjectName="Join_1" columnName="KZBWS"/>
+    </attribute>
+    <attribute id="WGRU1" order="202" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WGRU1"/>
+      <keyMapping columnObjectName="Join_1" columnName="WGRU1"/>
+    </attribute>
+    <attribute id="WGRU2" order="203" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WGRU2"/>
+      <keyMapping columnObjectName="Join_1" columnName="WGRU2"/>
+    </attribute>
+    <attribute id="KNUMA_PI" order="204" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KNUMA_PI"/>
+      <keyMapping columnObjectName="Join_1" columnName="KNUMA_PI"/>
+    </attribute>
+    <attribute id="KNUMA_AG" order="205" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KNUMA_AG"/>
+      <keyMapping columnObjectName="Join_1" columnName="KNUMA_AG"/>
+    </attribute>
+    <attribute id="KZFME" order="206" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KZFME"/>
+      <keyMapping columnObjectName="Join_1" columnName="KZFME"/>
+    </attribute>
+    <attribute id="LSTANR" order="207" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LSTANR"/>
+      <keyMapping columnObjectName="Join_1" columnName="LSTANR"/>
+    </attribute>
+    <attribute id="TECHS" order="208" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TECHS"/>
+      <keyMapping columnObjectName="Join_1" columnName="TECHS"/>
+    </attribute>
+    <attribute id="BERID" order="210" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BERID"/>
+      <keyMapping columnObjectName="Join_1" columnName="BERID"/>
+    </attribute>
+    <attribute id="PCTRF" order="211" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PCTRF"/>
+      <keyMapping columnObjectName="Join_1" columnName="PCTRF"/>
+    </attribute>
+    <attribute id="LOGSYS_EXT" order="212" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LOGSYS_EXT"/>
+      <keyMapping columnObjectName="Join_1" columnName="LOGSYS_EXT"/>
+    </attribute>
+    <attribute id="J_1BTAXLW3" order="213" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="J_1BTAXLW3"/>
+      <keyMapping columnObjectName="Join_1" columnName="J_1BTAXLW3"/>
+    </attribute>
+    <attribute id="J_1BTAXLW4" order="214" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="J_1BTAXLW4"/>
+      <keyMapping columnObjectName="Join_1" columnName="J_1BTAXLW4"/>
+    </attribute>
+    <attribute id="J_1BTAXLW5" order="215" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="J_1BTAXLW5"/>
+      <keyMapping columnObjectName="Join_1" columnName="J_1BTAXLW5"/>
+    </attribute>
+    <attribute id="STOCKLOC" order="216" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STOCKLOC"/>
+      <keyMapping columnObjectName="Join_1" columnName="STOCKLOC"/>
+    </attribute>
+    <attribute id="SLOCTYPE" order="217" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SLOCTYPE"/>
+      <keyMapping columnObjectName="Join_1" columnName="SLOCTYPE"/>
+    </attribute>
+    <attribute id="MSR_RET_REASON" order="218" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MSR_RET_REASON"/>
+      <keyMapping columnObjectName="Join_1" columnName="MSR_RET_REASON"/>
+    </attribute>
+    <attribute id="MSR_REFUND_CODE" order="219" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MSR_REFUND_CODE"/>
+      <keyMapping columnObjectName="Join_1" columnName="MSR_REFUND_CODE"/>
+    </attribute>
+    <attribute id="MSR_APPROV_BLOCK" order="220" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MSR_APPROV_BLOCK"/>
+      <keyMapping columnObjectName="Join_1" columnName="MSR_APPROV_BLOCK"/>
+    </attribute>
+    <attribute id="NRAB_KNUMH" order="221" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NRAB_KNUMH"/>
+      <keyMapping columnObjectName="Join_1" columnName="NRAB_KNUMH"/>
+    </attribute>
+    <attribute id="TRMRISK_RELEVANT" order="222" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TRMRISK_RELEVANT"/>
+      <keyMapping columnObjectName="Join_1" columnName="TRMRISK_RELEVANT"/>
+    </attribute>
+    <attribute id="SGT_RCAT" order="223" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SGT_RCAT"/>
+      <keyMapping columnObjectName="Join_1" columnName="SGT_RCAT"/>
+    </attribute>
+    <attribute id="VBKD_POSNR" order="224" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VBKD_POSNR"/>
+      <keyMapping columnObjectName="Join_1" columnName="VBKD_POSNR"/>
+    </attribute>
+    <attribute id="VEDA_POSNR" order="225" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VEDA_POSNR"/>
+      <keyMapping columnObjectName="Join_1" columnName="VEDA_POSNR"/>
+    </attribute>
+    <attribute id="HANDOVERLOC" order="226" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="HANDOVERLOC"/>
+      <keyMapping columnObjectName="Join_1" columnName="HANDOVERLOC"/>
+    </attribute>
+    <attribute id="EXT_REF_ITEM_ID" order="227" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EXT_REF_ITEM_ID"/>
+      <keyMapping columnObjectName="Join_1" columnName="EXT_REF_ITEM_ID"/>
+    </attribute>
+    <attribute id="HANDOVERDATE" order="228" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="HANDOVERDATE"/>
+      <keyMapping columnObjectName="Join_1" columnName="HANDOVERDATE"/>
+    </attribute>
+    <attribute id="HANDOVERTIME" order="229" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="HANDOVERTIME"/>
+      <keyMapping columnObjectName="Join_1" columnName="HANDOVERTIME"/>
+    </attribute>
+    <attribute id="TC_AUT_DET" order="230" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TC_AUT_DET"/>
+      <keyMapping columnObjectName="Join_1" columnName="TC_AUT_DET"/>
+    </attribute>
+    <attribute id="MANUAL_TC_REASON" order="231" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MANUAL_TC_REASON"/>
+      <keyMapping columnObjectName="Join_1" columnName="MANUAL_TC_REASON"/>
+    </attribute>
+    <attribute id="FISCAL_INCENTIVE" order="232" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FISCAL_INCENTIVE"/>
+      <keyMapping columnObjectName="Join_1" columnName="FISCAL_INCENTIVE"/>
+    </attribute>
+    <attribute id="TAX_SUBJECT_ST" order="233" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TAX_SUBJECT_ST"/>
+      <keyMapping columnObjectName="Join_1" columnName="TAX_SUBJECT_ST"/>
+    </attribute>
+    <attribute id="FISCAL_INCENTIVE_ID" order="234" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FISCAL_INCENTIVE_ID"/>
+      <keyMapping columnObjectName="Join_1" columnName="FISCAL_INCENTIVE_ID"/>
+    </attribute>
+    <attribute id="SPCSTO" order="235" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SPCSTO"/>
+      <keyMapping columnObjectName="Join_1" columnName="SPCSTO"/>
+    </attribute>
+    <attribute id="REVACC_REFID" order="236" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REVACC_REFID"/>
+      <keyMapping columnObjectName="Join_1" columnName="REVACC_REFID"/>
+    </attribute>
+    <attribute id="REVACC_REFTYPE" order="237" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REVACC_REFTYPE"/>
+      <keyMapping columnObjectName="Join_1" columnName="REVACC_REFTYPE"/>
+    </attribute>
+    <attribute id="_DATAAGING" order="238" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="_DATAAGING"/>
+      <keyMapping columnObjectName="Join_1" columnName="_DATAAGING"/>
+    </attribute>
+    <attribute id="ABSTA" order="239" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ABSTA"/>
+      <keyMapping columnObjectName="Join_1" columnName="ABSTA"/>
+    </attribute>
+    <attribute id="BESTA" order="240" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BESTA"/>
+      <keyMapping columnObjectName="Join_1" columnName="BESTA"/>
+    </attribute>
+    <attribute id="CMPPI" order="241" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CMPPI"/>
+      <keyMapping columnObjectName="Join_1" columnName="CMPPI"/>
+    </attribute>
+    <attribute id="CMPPJ" order="242" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CMPPJ"/>
+      <keyMapping columnObjectName="Join_1" columnName="CMPPJ"/>
+    </attribute>
+    <attribute id="COSTA" order="243" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="COSTA"/>
+      <keyMapping columnObjectName="Join_1" columnName="COSTA"/>
+    </attribute>
+    <attribute id="DCSTA" order="244" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DCSTA"/>
+      <keyMapping columnObjectName="Join_1" columnName="DCSTA"/>
+    </attribute>
+    <attribute id="FKSAA" order="245" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FKSAA"/>
+      <keyMapping columnObjectName="Join_1" columnName="FKSAA"/>
+    </attribute>
+    <attribute id="FSSTA" order="246" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FSSTA"/>
+      <keyMapping columnObjectName="Join_1" columnName="FSSTA"/>
+    </attribute>
+    <attribute id="GBSTA" order="247" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GBSTA"/>
+      <keyMapping columnObjectName="Join_1" columnName="GBSTA"/>
+    </attribute>
+    <attribute id="LFGSA" order="248" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LFGSA"/>
+      <keyMapping columnObjectName="Join_1" columnName="LFGSA"/>
+    </attribute>
+    <attribute id="LFSTA" order="249" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LFSTA"/>
+      <keyMapping columnObjectName="Join_1" columnName="LFSTA"/>
+    </attribute>
+    <attribute id="LSSTA" order="250" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LSSTA"/>
+      <keyMapping columnObjectName="Join_1" columnName="LSSTA"/>
+    </attribute>
+    <attribute id="MANEK" order="251" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MANEK"/>
+      <keyMapping columnObjectName="Join_1" columnName="MANEK"/>
+    </attribute>
+    <attribute id="RFGSA" order="252" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RFGSA"/>
+      <keyMapping columnObjectName="Join_1" columnName="RFGSA"/>
+    </attribute>
+    <attribute id="RFSTA" order="253" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RFSTA"/>
+      <keyMapping columnObjectName="Join_1" columnName="RFSTA"/>
+    </attribute>
+    <attribute id="UVALL" order="254" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UVALL"/>
+      <keyMapping columnObjectName="Join_1" columnName="UVALL"/>
+    </attribute>
+    <attribute id="UVFAK" order="255" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UVFAK"/>
+      <keyMapping columnObjectName="Join_1" columnName="UVFAK"/>
+    </attribute>
+    <attribute id="UVPRS" order="256" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UVPRS"/>
+      <keyMapping columnObjectName="Join_1" columnName="UVPRS"/>
+    </attribute>
+    <attribute id="UVVLK" order="257" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UVVLK"/>
+      <keyMapping columnObjectName="Join_1" columnName="UVVLK"/>
+    </attribute>
+    <attribute id="UVP01" order="258" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UVP01"/>
+      <keyMapping columnObjectName="Join_1" columnName="UVP01"/>
+    </attribute>
+    <attribute id="UVP02" order="259" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UVP02"/>
+      <keyMapping columnObjectName="Join_1" columnName="UVP02"/>
+    </attribute>
+    <attribute id="UVP03" order="260" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UVP03"/>
+      <keyMapping columnObjectName="Join_1" columnName="UVP03"/>
+    </attribute>
+    <attribute id="UVP04" order="261" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UVP04"/>
+      <keyMapping columnObjectName="Join_1" columnName="UVP04"/>
+    </attribute>
+    <attribute id="UVP05" order="262" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UVP05"/>
+      <keyMapping columnObjectName="Join_1" columnName="UVP05"/>
+    </attribute>
+    <attribute id="WBSTA" order="263" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WBSTA"/>
+      <keyMapping columnObjectName="Join_1" columnName="WBSTA"/>
+    </attribute>
+    <attribute id="EMCST" order="264" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EMCST"/>
+      <keyMapping columnObjectName="Join_1" columnName="EMCST"/>
+    </attribute>
+    <attribute id="SLCST" order="265" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SLCST"/>
+      <keyMapping columnObjectName="Join_1" columnName="SLCST"/>
+    </attribute>
+    <attribute id="TOTAL_LCCST" order="266" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TOTAL_LCCST"/>
+      <keyMapping columnObjectName="Join_1" columnName="TOTAL_LCCST"/>
+    </attribute>
+    <attribute id="PCSTA" order="267" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PCSTA"/>
+      <keyMapping columnObjectName="Join_1" columnName="PCSTA"/>
+    </attribute>
+    <attribute id="DGSTA" order="268" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DGSTA"/>
+      <keyMapping columnObjectName="Join_1" columnName="DGSTA"/>
+    </attribute>
+    <attribute id="SDSSTA" order="269" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SDSSTA"/>
+      <keyMapping columnObjectName="Join_1" columnName="SDSSTA"/>
+    </attribute>
+    <attribute id="DP_CLEAR_STA_ITM" order="270" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DP_CLEAR_STA_ITM"/>
+      <keyMapping columnObjectName="Join_1" columnName="DP_CLEAR_STA_ITM"/>
+    </attribute>
+    <attribute id="CMTD_DELIV_DATE" order="271" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CMTD_DELIV_DATE"/>
+      <keyMapping columnObjectName="Join_1" columnName="CMTD_DELIV_DATE"/>
+    </attribute>
+    <attribute id="CMTD_DELIV_CREADATE" order="272" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CMTD_DELIV_CREADATE"/>
+      <keyMapping columnObjectName="Join_1" columnName="CMTD_DELIV_CREADATE"/>
+    </attribute>
+    <attribute id="DELIVERY_DATE_TYPE_RULE" order="274" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DELIVERY_DATE_TYPE_RULE"/>
+      <keyMapping columnObjectName="Join_1" columnName="DELIVERY_DATE_TYPE_RULE"/>
+    </attribute>
+    <attribute id="HANDLE" order="276" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="HANDLE"/>
+      <keyMapping columnObjectName="Join_1" columnName="HANDLE"/>
+    </attribute>
+    <attribute id="PBS_STATE" order="277" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PBS_STATE"/>
+      <keyMapping columnObjectName="Join_1" columnName="PBS_STATE"/>
+    </attribute>
+    <attribute id="IFRS15_RELEVANCE" order="278" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="IFRS15_RELEVANCE"/>
+      <keyMapping columnObjectName="Join_1" columnName="IFRS15_RELEVANCE"/>
+    </attribute>
+    <attribute id="REVFP" order="280" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REVFP"/>
+      <keyMapping columnObjectName="Join_1" columnName="REVFP"/>
+    </attribute>
+    <attribute id="CAPPED_NET_AMOUNT_ALERT_THLD" order="282" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CAPPED_NET_AMOUNT_ALERT_THLD"/>
+      <keyMapping columnObjectName="Join_1" columnName="CAPPED_NET_AMOUNT_ALERT_THLD"/>
+    </attribute>
+    <attribute id="CATS_OVERTIME_CATEGORY" order="283" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CATS_OVERTIME_CATEGORY"/>
+      <keyMapping columnObjectName="Join_1" columnName="CATS_OVERTIME_CATEGORY"/>
+    </attribute>
+    <attribute id="SESSION_CREATION_DATE" order="284" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SESSION_CREATION_DATE"/>
+      <keyMapping columnObjectName="Join_1" columnName="SESSION_CREATION_DATE"/>
+    </attribute>
+    <attribute id="SESSION_CREATION_TIME" order="285" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SESSION_CREATION_TIME"/>
+      <keyMapping columnObjectName="Join_1" columnName="SESSION_CREATION_TIME"/>
+    </attribute>
+    <attribute id="ORIGINAL_PLANT" order="286" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ORIGINAL_PLANT"/>
+      <keyMapping columnObjectName="Join_1" columnName="ORIGINAL_PLANT"/>
+    </attribute>
+    <attribute id="ATP_ABC_SUBSTITUTION_STATUS" order="287" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ATP_ABC_SUBSTITUTION_STATUS"/>
+      <keyMapping columnObjectName="Join_1" columnName="ATP_ABC_SUBSTITUTION_STATUS"/>
+    </attribute>
+    <attribute id="TRANSIT_PLANT" order="288" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TRANSIT_PLANT"/>
+      <keyMapping columnObjectName="Join_1" columnName="TRANSIT_PLANT"/>
+    </attribute>
+    <attribute id="REASON_CODE" order="289" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REASON_CODE"/>
+      <keyMapping columnObjectName="Join_1" columnName="REASON_CODE"/>
+    </attribute>
+    <attribute id="DUMMY_SLSDOCITEM_INCL_EEW_PS" order="290" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DUMMY_SLSDOCITEM_INCL_EEW_PS"/>
+      <keyMapping columnObjectName="Join_1" columnName="DUMMY_SLSDOCITEM_INCL_EEW_PS"/>
+    </attribute>
+    <attribute id="PO_UNIT" order="292" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PO_UNIT"/>
+      <keyMapping columnObjectName="Join_1" columnName="PO_UNIT"/>
+    </attribute>
+    <attribute id="MILL_SE_GPOSN" order="293" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MILL_SE_GPOSN"/>
+      <keyMapping columnObjectName="Join_1" columnName="MILL_SE_GPOSN"/>
+    </attribute>
+    <attribute id="MILL_BATCH_SEL_F" order="294" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MILL_BATCH_SEL_F"/>
+      <keyMapping columnObjectName="Join_1" columnName="MILL_BATCH_SEL_F"/>
+    </attribute>
+    <attribute id="VBTYP_ANA" order="295" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VBTYP_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="VBTYP_ANA"/>
+    </attribute>
+    <attribute id="AUART_ANA" order="296" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AUART_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="AUART_ANA"/>
+    </attribute>
+    <attribute id="VKORG_ANA" order="297" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VKORG_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="VKORG_ANA"/>
+    </attribute>
+    <attribute id="VTWEG_ANA" order="298" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VTWEG_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="VTWEG_ANA"/>
+    </attribute>
+    <attribute id="SPART_ANA" order="299" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SPART_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="SPART_ANA"/>
+    </attribute>
+    <attribute id="VKBUR_ANA" order="300" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VKBUR_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="VKBUR_ANA"/>
+    </attribute>
+    <attribute id="VKGRP_ANA" order="301" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VKGRP_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="VKGRP_ANA"/>
+    </attribute>
+    <attribute id="AUGRU_ANA" order="302" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AUGRU_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="AUGRU_ANA"/>
+    </attribute>
+    <attribute id="AUDAT_ANA" order="303" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AUDAT_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="AUDAT_ANA"/>
+    </attribute>
+    <attribute id="KVGR1_ANA" order="304" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KVGR1_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="KVGR1_ANA"/>
+    </attribute>
+    <attribute id="KVGR2_ANA" order="305" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KVGR2_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="KVGR2_ANA"/>
+    </attribute>
+    <attribute id="KVGR3_ANA" order="306" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KVGR3_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="KVGR3_ANA"/>
+    </attribute>
+    <attribute id="KVGR4_ANA" order="307" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KVGR4_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="KVGR4_ANA"/>
+    </attribute>
+    <attribute id="KVGR5_ANA" order="308" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KVGR5_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="KVGR5_ANA"/>
+    </attribute>
+    <attribute id="VDATU_ANA" order="309" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VDATU_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="VDATU_ANA"/>
+    </attribute>
+    <attribute id="VSBED_ANA" order="310" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VSBED_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="VSBED_ANA"/>
+    </attribute>
+    <attribute id="KUNNR_ANA" order="311" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KUNNR_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="KUNNR_ANA"/>
+    </attribute>
+    <attribute id="KNUMV_ANA" order="312" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KNUMV_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="KNUMV_ANA"/>
+    </attribute>
+    <attribute id="BZIRK_ANA" order="313" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BZIRK_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="BZIRK_ANA"/>
+    </attribute>
+    <attribute id="BSTKD_ANA" order="314" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BSTKD_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="BSTKD_ANA"/>
+    </attribute>
+    <attribute id="KDGRP_ANA" order="315" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KDGRP_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="KDGRP_ANA"/>
+    </attribute>
+    <attribute id="VSART_ANA" order="316" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VSART_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="VSART_ANA"/>
+    </attribute>
+    <attribute id="FKDAT_ANA" order="317" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FKDAT_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="FKDAT_ANA"/>
+    </attribute>
+    <attribute id="FPLNR_ANA" order="318" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FPLNR_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="FPLNR_ANA"/>
+    </attribute>
+    <attribute id="KUNWE_ANA" order="319" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KUNWE_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="KUNWE_ANA"/>
+    </attribute>
+    <attribute id="KUNRE_ANA" order="320" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KUNRE_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="KUNRE_ANA"/>
+    </attribute>
+    <attribute id="PERVE_ANA" order="321" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PERVE_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="PERVE_ANA"/>
+    </attribute>
+    <attribute id="PERZM_ANA" order="322" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PERZM_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="PERZM_ANA"/>
+    </attribute>
+    <attribute id="KUNRG_ANA" order="323" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KUNRG_ANA"/>
+      <keyMapping columnObjectName="Join_1" columnName="KUNRG_ANA"/>
+    </attribute>
+    <attribute id="SERVICE_DOC_TYPE" order="324" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SERVICE_DOC_TYPE"/>
+      <keyMapping columnObjectName="Join_1" columnName="SERVICE_DOC_TYPE"/>
+    </attribute>
+    <attribute id="SERVICE_DOC_ID" order="325" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SERVICE_DOC_ID"/>
+      <keyMapping columnObjectName="Join_1" columnName="SERVICE_DOC_ID"/>
+    </attribute>
+    <attribute id="SERVICE_DOC_ITEM_ID" order="326" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SERVICE_DOC_ITEM_ID"/>
+      <keyMapping columnObjectName="Join_1" columnName="SERVICE_DOC_ITEM_ID"/>
+    </attribute>
+    <attribute id="SOLUTION_ORDER_ID" order="327" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SOLUTION_ORDER_ID"/>
+      <keyMapping columnObjectName="Join_1" columnName="SOLUTION_ORDER_ID"/>
+    </attribute>
+    <attribute id="SOLUTION_ORDER_ITM_ID" order="328" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SOLUTION_ORDER_ITM_ID"/>
+      <keyMapping columnObjectName="Join_1" columnName="SOLUTION_ORDER_ITM_ID"/>
+    </attribute>
+    <attribute id="GLO_LOG_REF1_IT" order="329" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GLO_LOG_REF1_IT"/>
+      <keyMapping columnObjectName="Join_1" columnName="GLO_LOG_REF1_IT"/>
+    </attribute>
+    <attribute id="ZAPCGKI" order="331" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ZAPCGKI"/>
+      <keyMapping columnObjectName="Join_1" columnName="ZAPCGKI"/>
+    </attribute>
+    <attribute id="APCGK_EXTENDI" order="332" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="APCGK_EXTENDI"/>
+      <keyMapping columnObjectName="Join_1" columnName="APCGK_EXTENDI"/>
+    </attribute>
+    <attribute id="ZABDATI" order="333" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ZABDATI"/>
+      <keyMapping columnObjectName="Join_1" columnName="ZABDATI"/>
+    </attribute>
+    <attribute id="AUFPL_OLC" order="334" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AUFPL_OLC"/>
+      <keyMapping columnObjectName="Join_1" columnName="AUFPL_OLC"/>
+    </attribute>
+    <attribute id="APLZL_OLC" order="335" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="APLZL_OLC"/>
+      <keyMapping columnObjectName="Join_1" columnName="APLZL_OLC"/>
+    </attribute>
+    <attribute id="AD01PROFNR" order="336" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AD01PROFNR"/>
+      <keyMapping columnObjectName="Join_1" columnName="AD01PROFNR"/>
+    </attribute>
+    <attribute id="ADMOI" order="337" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADMOI"/>
+      <keyMapping columnObjectName="Join_1" columnName="ADMOI"/>
+    </attribute>
+    <attribute id="ADICC" order="338" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADICC"/>
+      <keyMapping columnObjectName="Join_1" columnName="ADICC"/>
+    </attribute>
+    <attribute id="ADPRI" order="339" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADPRI"/>
+      <keyMapping columnObjectName="Join_1" columnName="ADPRI"/>
+    </attribute>
+    <attribute id="ADDNS" order="340" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADDNS"/>
+      <keyMapping columnObjectName="Join_1" columnName="ADDNS"/>
+    </attribute>
+    <attribute id="ADACN" order="341" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADACN"/>
+      <keyMapping columnObjectName="Join_1" columnName="ADACN"/>
+    </attribute>
+    <attribute id="ASSIGNMENT_PRIORITY" order="342" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ASSIGNMENT_PRIORITY"/>
+      <keyMapping columnObjectName="Join_1" columnName="ASSIGNMENT_PRIORITY"/>
+    </attribute>
+    <attribute id="ARUN_GROUP_PRIO" order="343" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ARUN_GROUP_PRIO"/>
+      <keyMapping columnObjectName="Join_1" columnName="ARUN_GROUP_PRIO"/>
+    </attribute>
+    <attribute id="LABSG" order="344" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LABSG"/>
+      <keyMapping columnObjectName="Join_1" columnName="LABSG"/>
+    </attribute>
+    <attribute id="FABSG" order="345" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FABSG"/>
+      <keyMapping columnObjectName="Join_1" columnName="FABSG"/>
+    </attribute>
+    <attribute id="PR_L_L" order="346" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PR_L_L"/>
+      <keyMapping columnObjectName="Join_1" columnName="PR_L_L"/>
+    </attribute>
+    <attribute id="PR_F_F" order="347" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PR_F_F"/>
+      <keyMapping columnObjectName="Join_1" columnName="PR_F_F"/>
+    </attribute>
+    <attribute id="PR_F_L" order="348" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PR_F_L"/>
+      <keyMapping columnObjectName="Join_1" columnName="PR_F_L"/>
+    </attribute>
+    <attribute id="FERC_IND" order="349" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FERC_IND"/>
+      <keyMapping columnObjectName="Join_1" columnName="FERC_IND"/>
+    </attribute>
+    <attribute id="FSH_SEASON_YEAR" order="350" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FSH_SEASON_YEAR"/>
+      <keyMapping columnObjectName="Join_1" columnName="FSH_SEASON_YEAR"/>
+    </attribute>
+    <attribute id="FSH_SEASON" order="351" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FSH_SEASON"/>
+      <keyMapping columnObjectName="Join_1" columnName="FSH_SEASON"/>
+    </attribute>
+    <attribute id="FSH_COLLECTION" order="352" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FSH_COLLECTION"/>
+      <keyMapping columnObjectName="Join_1" columnName="FSH_COLLECTION"/>
+    </attribute>
+    <attribute id="FSH_THEME" order="353" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FSH_THEME"/>
+      <keyMapping columnObjectName="Join_1" columnName="FSH_THEME"/>
+    </attribute>
+    <attribute id="FSH_CRSD" order="354" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FSH_CRSD"/>
+      <keyMapping columnObjectName="Join_1" columnName="FSH_CRSD"/>
+    </attribute>
+    <attribute id="FSH_SEAREF" order="355" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FSH_SEAREF"/>
+      <keyMapping columnObjectName="Join_1" columnName="FSH_SEAREF"/>
+    </attribute>
+    <attribute id="FSH_CANDATE" order="356" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FSH_CANDATE"/>
+      <keyMapping columnObjectName="Join_1" columnName="FSH_CANDATE"/>
+    </attribute>
+    <attribute id="FSH_PSM_PFM_SPLIT" order="357" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FSH_PSM_PFM_SPLIT"/>
+      <keyMapping columnObjectName="Join_1" columnName="FSH_PSM_PFM_SPLIT"/>
+    </attribute>
+    <attribute id="FSH_VAS_REL" order="358" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FSH_VAS_REL"/>
+      <keyMapping columnObjectName="Join_1" columnName="FSH_VAS_REL"/>
+    </attribute>
+    <attribute id="FSH_VAS_PRNT_ID" order="359" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FSH_VAS_PRNT_ID"/>
+      <keyMapping columnObjectName="Join_1" columnName="FSH_VAS_PRNT_ID"/>
+    </attribute>
+    <attribute id="FSH_TRANSACTION" order="360" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FSH_TRANSACTION"/>
+      <keyMapping columnObjectName="Join_1" columnName="FSH_TRANSACTION"/>
+    </attribute>
+    <attribute id="FSH_ITEM_GROUP" order="361" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FSH_ITEM_GROUP"/>
+      <keyMapping columnObjectName="Join_1" columnName="FSH_ITEM_GROUP"/>
+    </attribute>
+    <attribute id="FSH_ITEM" order="362" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FSH_ITEM"/>
+      <keyMapping columnObjectName="Join_1" columnName="FSH_ITEM"/>
+    </attribute>
+    <attribute id="FSH_VASREF" order="363" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FSH_VASREF"/>
+      <keyMapping columnObjectName="Join_1" columnName="FSH_VASREF"/>
+    </attribute>
+    <attribute id="FSH_GRID_COND_REC" order="364" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FSH_GRID_COND_REC"/>
+      <keyMapping columnObjectName="Join_1" columnName="FSH_GRID_COND_REC"/>
+    </attribute>
+    <attribute id="FSH_PQR_UEPOS" order="365" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FSH_PQR_UEPOS"/>
+      <keyMapping columnObjectName="Join_1" columnName="FSH_PQR_UEPOS"/>
+    </attribute>
+    <attribute id="RFM_SCC_INDICATOR" order="366" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RFM_SCC_INDICATOR"/>
+      <keyMapping columnObjectName="Join_1" columnName="RFM_SCC_INDICATOR"/>
+    </attribute>
+    <attribute id="KOSTL" order="367" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KOSTL"/>
+      <keyMapping columnObjectName="Join_1" columnName="KOSTL"/>
+    </attribute>
+    <attribute id="FONDS" order="368" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FONDS"/>
+      <keyMapping columnObjectName="Join_1" columnName="FONDS"/>
+    </attribute>
+    <attribute id="FISTL" order="369" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FISTL"/>
+      <keyMapping columnObjectName="Join_1" columnName="FISTL"/>
+    </attribute>
+    <attribute id="FKBER" order="370" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FKBER"/>
+      <keyMapping columnObjectName="Join_1" columnName="FKBER"/>
+    </attribute>
+    <attribute id="GRANT_NBR" order="371" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GRANT_NBR"/>
+      <keyMapping columnObjectName="Join_1" columnName="GRANT_NBR"/>
+    </attribute>
+    <attribute id="BUDGET_PD" order="372" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BUDGET_PD"/>
+      <keyMapping columnObjectName="Join_1" columnName="BUDGET_PD"/>
+    </attribute>
+    <attribute id="IUID_RELEVANT" order="373" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="IUID_RELEVANT"/>
+      <keyMapping columnObjectName="Join_1" columnName="IUID_RELEVANT"/>
+    </attribute>
+    <attribute id="EQUNR" order="374" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EQUNR"/>
+      <keyMapping columnObjectName="Join_1" columnName="EQUNR"/>
+    </attribute>
+    <attribute id="EQART" order="375" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EQART"/>
+      <keyMapping columnObjectName="Join_1" columnName="EQART"/>
+    </attribute>
+    <attribute id="J_3GLVART" order="376" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="J_3GLVART"/>
+      <keyMapping columnObjectName="Join_1" columnName="J_3GLVART"/>
+    </attribute>
+    <attribute id="J_3GDATVO" order="377" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="J_3GDATVO"/>
+      <keyMapping columnObjectName="Join_1" columnName="J_3GDATVO"/>
+    </attribute>
+    <attribute id="J_3GDATBI" order="378" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="J_3GDATBI"/>
+      <keyMapping columnObjectName="Join_1" columnName="J_3GDATBI"/>
+    </attribute>
+    <attribute id="J_3GBELNRI" order="379" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="J_3GBELNRI"/>
+      <keyMapping columnObjectName="Join_1" columnName="J_3GBELNRI"/>
+    </attribute>
+    <attribute id="J_3GPOSNRI" order="380" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="J_3GPOSNRI"/>
+      <keyMapping columnObjectName="Join_1" columnName="J_3GPOSNRI"/>
+    </attribute>
+    <attribute id="PRS_OBJNR" order="381" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRS_OBJNR"/>
+      <keyMapping columnObjectName="Join_1" columnName="PRS_OBJNR"/>
+    </attribute>
+    <attribute id="PRS_SD_SPSNR" order="382" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRS_SD_SPSNR"/>
+      <keyMapping columnObjectName="Join_1" columnName="PRS_SD_SPSNR"/>
+    </attribute>
+    <attribute id="PRS_WORK_PERIOD" order="383" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRS_WORK_PERIOD"/>
+      <keyMapping columnObjectName="Join_1" columnName="PRS_WORK_PERIOD"/>
+    </attribute>
+    <attribute id="TAS" order="384" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TAS"/>
+      <keyMapping columnObjectName="Join_1" columnName="TAS"/>
+    </attribute>
+    <attribute id="BETC" order="385" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BETC"/>
+      <keyMapping columnObjectName="Join_1" columnName="BETC"/>
+    </attribute>
+    <attribute id="MOD_ALLOW" order="386" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MOD_ALLOW"/>
+      <keyMapping columnObjectName="Join_1" columnName="MOD_ALLOW"/>
+    </attribute>
+    <attribute id="CANCEL_ALLOW" order="387" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CANCEL_ALLOW"/>
+      <keyMapping columnObjectName="Join_1" columnName="CANCEL_ALLOW"/>
+    </attribute>
+    <attribute id="PAY_METHOD" order="388" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PAY_METHOD"/>
+      <keyMapping columnObjectName="Join_1" columnName="PAY_METHOD"/>
+    </attribute>
+    <attribute id="BPN" order="389" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BPN"/>
+      <keyMapping columnObjectName="Join_1" columnName="BPN"/>
+    </attribute>
+    <attribute id="REP_FREQ" order="390" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REP_FREQ"/>
+      <keyMapping columnObjectName="Join_1" columnName="REP_FREQ"/>
+    </attribute>
+    <attribute id="FMFGUS_KEY" order="391" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FMFGUS_KEY"/>
+      <keyMapping columnObjectName="Join_1" columnName="FMFGUS_KEY"/>
+    </attribute>
+    <attribute id="RFM_PSST_RULE" order="392" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RFM_PSST_RULE"/>
+      <keyMapping columnObjectName="Join_1" columnName="RFM_PSST_RULE"/>
+    </attribute>
+    <attribute id="RFM_PSST_GROUP" order="393" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RFM_PSST_GROUP"/>
+      <keyMapping columnObjectName="Join_1" columnName="RFM_PSST_GROUP"/>
+    </attribute>
+    <attribute id="PARGB" order="394" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PARGB"/>
+      <keyMapping columnObjectName="Join_1" columnName="PARGB"/>
+    </attribute>
+    <attribute id="AUFPL_OAA" order="395" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AUFPL_OAA"/>
+      <keyMapping columnObjectName="Join_1" columnName="AUFPL_OAA"/>
+    </attribute>
+    <attribute id="APLZL_OAA" order="396" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="APLZL_OAA"/>
+      <keyMapping columnObjectName="Join_1" columnName="APLZL_OAA"/>
+    </attribute>
+    <attribute id="VLCENDCU" order="397" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VLCENDCU"/>
+      <keyMapping columnObjectName="Join_1" columnName="VLCENDCU"/>
+    </attribute>
+    <attribute id="WRF_CHARSTC1" order="398" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WRF_CHARSTC1"/>
+      <keyMapping columnObjectName="Join_1" columnName="WRF_CHARSTC1"/>
+    </attribute>
+    <attribute id="WRF_CHARSTC2" order="399" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WRF_CHARSTC2"/>
+      <keyMapping columnObjectName="Join_1" columnName="WRF_CHARSTC2"/>
+    </attribute>
+    <attribute id="WRF_CHARSTC3" order="400" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WRF_CHARSTC3"/>
+      <keyMapping columnObjectName="Join_1" columnName="WRF_CHARSTC3"/>
+    </attribute>
+    <attribute id="ARSNUM" order="401" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ARSNUM"/>
+      <keyMapping columnObjectName="Join_1" columnName="ARSNUM"/>
+    </attribute>
+    <attribute id="ARSPOS" order="402" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ARSPOS"/>
+      <keyMapping columnObjectName="Join_1" columnName="ARSPOS"/>
+    </attribute>
+    <attribute id="WTYSC_CLMITEM" order="403" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WTYSC_CLMITEM"/>
+      <keyMapping columnObjectName="Join_1" columnName="WTYSC_CLMITEM"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="ZWERT" order="23" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="ZWERT"/>
+      <measureMapping columnObjectName="Join_1" columnName="ZWERT"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="ZMENG" order="24" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="ZMENG"/>
+      <measureMapping columnObjectName="Join_1" columnName="ZMENG"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="UMZIZ" order="26" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="UMZIZ"/>
+      <measureMapping columnObjectName="Join_1" columnName="UMZIZ"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="UMZIN" order="27" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="UMZIN"/>
+      <measureMapping columnObjectName="Join_1" columnName="UMZIN"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="SMENG" order="29" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="SMENG"/>
+      <measureMapping columnObjectName="Join_1" columnName="SMENG"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="ABLFZ" order="30" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="ABLFZ"/>
+      <measureMapping columnObjectName="Join_1" columnName="ABLFZ"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="ABSFZ" order="32" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="ABSFZ"/>
+      <measureMapping columnObjectName="Join_1" columnName="ABSFZ"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="KBVER" order="35" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="KBVER"/>
+      <measureMapping columnObjectName="Join_1" columnName="KBVER"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="KEVER" order="36" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="KEVER"/>
+      <measureMapping columnObjectName="Join_1" columnName="KEVER"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="UEBTO" order="42" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="UEBTO"/>
+      <measureMapping columnObjectName="Join_1" columnName="UEBTO"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="UNTTO" order="43" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="UNTTO"/>
+      <measureMapping columnObjectName="Join_1" columnName="UNTTO"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="NETWR" order="49" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="NETWR"/>
+      <measureMapping columnObjectName="Join_1" columnName="NETWR"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="ANTLF" order="51" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="ANTLF"/>
+      <measureMapping columnObjectName="Join_1" columnName="ANTLF"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="KWMENG" order="54" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="KWMENG"/>
+      <measureMapping columnObjectName="Join_1" columnName="KWMENG"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="LSMENG" order="55" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="LSMENG"/>
+      <measureMapping columnObjectName="Join_1" columnName="LSMENG"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="KBMENG" order="56" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="KBMENG"/>
+      <measureMapping columnObjectName="Join_1" columnName="KBMENG"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="KLMENG" order="57" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="KLMENG"/>
+      <measureMapping columnObjectName="Join_1" columnName="KLMENG"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="UMVKZ" order="59" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="UMVKZ"/>
+      <measureMapping columnObjectName="Join_1" columnName="UMVKZ"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="UMVKN" order="60" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="UMVKN"/>
+      <measureMapping columnObjectName="Join_1" columnName="UMVKN"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="BRGEW" order="61" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="BRGEW"/>
+      <measureMapping columnObjectName="Join_1" columnName="BRGEW"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="NTGEW" order="62" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="NTGEW"/>
+      <measureMapping columnObjectName="Join_1" columnName="NTGEW"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="VOLUM" order="64" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="VOLUM"/>
+      <measureMapping columnObjectName="Join_1" columnName="VOLUM"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="STPOS" order="81" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="STPOS"/>
+      <measureMapping columnObjectName="Join_1" columnName="STPOS"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="VBEAF" order="95" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="VBEAF"/>
+      <measureMapping columnObjectName="Join_1" columnName="VBEAF"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="VBEAV" order="96" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="VBEAV"/>
+      <measureMapping columnObjectName="Join_1" columnName="VBEAV"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="NETPR" order="98" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="NETPR"/>
+      <measureMapping columnObjectName="Join_1" columnName="NETPR"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="KPEIN" order="99" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="KPEIN"/>
+      <measureMapping columnObjectName="Join_1" columnName="KPEIN"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="LFMNG" order="115" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="LFMNG"/>
+      <measureMapping columnObjectName="Join_1" columnName="LFMNG"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="WAVWR" order="117" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="WAVWR"/>
+      <measureMapping columnObjectName="Join_1" columnName="WAVWR"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="KZWI1" order="118" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="KZWI1"/>
+      <measureMapping columnObjectName="Join_1" columnName="KZWI1"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="KZWI2" order="119" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="KZWI2"/>
+      <measureMapping columnObjectName="Join_1" columnName="KZWI2"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="KZWI3" order="120" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="KZWI3"/>
+      <measureMapping columnObjectName="Join_1" columnName="KZWI3"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="KZWI4" order="121" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="KZWI4"/>
+      <measureMapping columnObjectName="Join_1" columnName="KZWI4"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="KZWI5" order="122" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="KZWI5"/>
+      <measureMapping columnObjectName="Join_1" columnName="KZWI5"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="KZWI6" order="123" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="KZWI6"/>
+      <measureMapping columnObjectName="Join_1" columnName="KZWI6"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="STCUR" order="124" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="STCUR"/>
+      <measureMapping columnObjectName="Join_1" columnName="STCUR"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="KMPMG" order="134" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="KMPMG"/>
+      <measureMapping columnObjectName="Join_1" columnName="KMPMG"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="UMREF" order="145" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="UMREF"/>
+      <measureMapping columnObjectName="Join_1" columnName="UMREF"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="CMPRE" order="152" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="CMPRE"/>
+      <measureMapping columnObjectName="Join_1" columnName="CMPRE"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="CMKUA" order="155" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="CMKUA"/>
+      <measureMapping columnObjectName="Join_1" columnName="CMKUA"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="ANZSN" order="161" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="ANZSN"/>
+      <measureMapping columnObjectName="Join_1" columnName="ANZSN"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="CMPRE_FLT" order="191" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="CMPRE_FLT"/>
+      <measureMapping columnObjectName="Join_1" columnName="CMPRE_FLT"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="ABGES" order="193" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="ABGES"/>
+      <measureMapping columnObjectName="Join_1" columnName="ABGES"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="MWSBP" order="209" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="MWSBP"/>
+      <measureMapping columnObjectName="Join_1" columnName="MWSBP"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="CMTD_DELIV_QTY_SU" order="273" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="CMTD_DELIV_QTY_SU"/>
+      <measureMapping columnObjectName="Join_1" columnName="CMTD_DELIV_QTY_SU"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="REQQTY_BU" order="275" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="REQQTY_BU"/>
+      <measureMapping columnObjectName="Join_1" columnName="REQQTY_BU"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="IFRS15_TOTAL_SSP" order="279" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="IFRS15_TOTAL_SSP"/>
+      <measureMapping columnObjectName="Join_1" columnName="IFRS15_TOTAL_SSP"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="CAPPED_NET_AMOUNT" order="281" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="CAPPED_NET_AMOUNT"/>
+      <measureMapping columnObjectName="Join_1" columnName="CAPPED_NET_AMOUNT"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="PO_QUAN" order="291" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="PO_QUAN"/>
+      <measureMapping columnObjectName="Join_1" columnName="PO_QUAN"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="CPD_UPDAT" order="330" aggregationType="sum" measureType="simple" restrictionExpressionLanguage="SQL">
+      <descriptions defaultDescription="CPD_UPDAT"/>
+      <measureMapping columnObjectName="Join_1" columnName="CPD_UPDAT"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="100" y="270"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="com.batch3.VT::VT_VBAP" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="3" y="-37"/>
+      <rectangleSize width="290.9609375"/>
+    </shape>
+    <shape modelObjectName="com.batch3.VT::VT_VBAK" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="390" y="-37"/>
+      <rectangleSize width="276.72216796875"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
